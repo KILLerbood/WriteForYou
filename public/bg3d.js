@@ -10,7 +10,7 @@ if (renderer) {
   scene.add(new THREE.HemisphereLight('#fff6e4', '#c9b28d', 1.5));
   const key = new THREE.DirectionalLight('#fff3d9', 2.2); key.position.set(-6, 9, 10); scene.add(key);
   const rim = new THREE.DirectionalLight('#ffb27a', 1.0); rim.position.set(8, -2, -4); scene.add(rim);
-  const tex = new THREE.TextureLoader().load('/duck.png'); tex.colorSpace = THREE.SRGBColorSpace; tex.anisotropy = 4;
+  const tex = new THREE.TextureLoader().load('duck.png'); tex.colorSpace = THREE.SRGBColorSpace; tex.anisotropy = 4;
   // a "thick" duck: stacked copies of the logo picture so it has volume when it turns
   const duckGeo = new THREE.PlaneGeometry(2.3, 2.3);
   function makeDuck() {

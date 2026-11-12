@@ -513,7 +513,7 @@
       if (reduce || e.target.closest('.card,button,a,input,select,textarea,label,.nav,.top,canvas,.sheet,.deliver,.notice,.notif,.toast,.job,.tab,summary')) return;
       const n = 16;
       for (let i = 0; i < n; i++) {
-        const im = document.createElement('img'); im.src = '/duck.png'; const s = 28 + Math.random() * 34;
+        const im = document.createElement('img'); im.src = 'duck.png'; const s = 28 + Math.random() * 34;
         im.style.cssText = `position:absolute;left:${e.clientX - s / 2}px;top:${e.clientY - s / 2}px;width:${s}px;height:${s}px;object-fit:contain;will-change:transform,opacity`;
         layer.appendChild(im);
         const ang = (Math.PI * 2 * i) / n + Math.random() * 0.4, d = 90 + Math.random() * 170, dx = Math.cos(ang) * d, dy = Math.sin(ang) * d - 60, rot = (Math.random() - 0.5) * 720;

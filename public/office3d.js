@@ -231,7 +231,7 @@ function buildBrain() {
   cyl(2.3, 2.5, 0.3, std('#efe6d2'), 0, 0.15, 0, brain, 48); cyl(1.9, 1.9, 0.12, std('#d62828', { roughness: 0.5 }), 0, 0.36, 0, brain, 48); cyl(1.6, 1.6, 0.1, std('#ffd400', { roughness: 0.5 }), 0, 0.46, 0, brain, 48);
   const duck = new THREE.Group(); duck.position.y = 1.5; brain.add(duck);
   // the brand duck picture, stacked in thin layers so it has a little volume; always turns to face the viewer
-  const dtex = new THREE.TextureLoader().load('/duck.png'); dtex.colorSpace = THREE.SRGBColorSpace; dtex.anisotropy = 8;
+  const dtex = new THREE.TextureLoader().load('duck.png'); dtex.colorSpace = THREE.SRGBColorSpace; dtex.anisotropy = 8;
   const face = new THREE.Group(); face.position.y = 1.0; duck.add(face);
   for (let i = 0; i < 7; i++) {
     const k = i / 6, m = new THREE.Mesh(new THREE.PlaneGeometry(3.6, 3.6), new THREE.MeshBasicMaterial({ map: dtex, color: new THREE.Color().setScalar(0.6 + 0.4 * k), transparent: true, alphaTest: 0.4, side: THREE.DoubleSide }));
