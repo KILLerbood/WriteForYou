@@ -23,4 +23,14 @@
   };
   new MutationObserver((ms) => { for (const m of ms) { if (m.type === 'attributes') fix(m.target); m.addedNodes && m.addedNodes.forEach((n) => { if (n.nodeType === 1) { fix(n); n.querySelectorAll && n.querySelectorAll('[src^="/api/"],[href^="/api/"]').forEach(fix); } }); } })
     .observe(document, { subtree: true, childList: true, attributes: true, attributeFilter: ['src', 'href'] });
+
+  // <base href="public/"> بيخلّي روابط #tab تنقل لـ /public/ — نمنع ده ونغيّر الـ hash بس
+  const root = location.pathname.replace(/public\/?$/, '');
+  document.addEventListener('click', (e) => {
+    const a = e.target.closest && e.target.closest('a[href^="#"]');
+    if (!a) return;
+    e.preventDefault();
+    history.replaceState(null, '', root + a.getAttribute('href'));
+    window.dispatchEvent(new HashChangeEvent('hashchange'));
+  }, true);
 })();
