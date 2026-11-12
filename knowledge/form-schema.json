@@ -1,0 +1,927 @@
+{
+  "form": "Riyad Bank Checklist Questions 2026 - Call Center - Wave 2",
+  "platform": "Ipsos shopmetrics (Survey Worksheet)",
+  "status": "VERIFIED against the full print preview of the live form (Survey Worksheet, 4 screenshots, 12 Nov 2026). Same form for ALL Riyad Bank Call Center projects. N/A is NOT used by us: every Yes/No question is answered Yes or No with a short reason as the comment.",
+  "sections": [
+    {
+      "id": "header",
+      "title": "Header",
+      "questions": [
+        {
+          "id": "Location",
+          "q": "Location",
+          "type": "text"
+        },
+        {
+          "id": "Date",
+          "q": "Date",
+          "type": "text"
+        },
+        {
+          "id": "TimeIn",
+          "q": "Time In",
+          "type": "text"
+        },
+        {
+          "id": "TimeOut",
+          "q": "Time Out",
+          "type": "text"
+        }
+      ]
+    },
+    {
+      "id": "screening",
+      "title": "Shopper & Scenario",
+      "questions": [
+        {
+          "id": "Z1",
+          "q": "Z1. Shopper Name",
+          "type": "text"
+        },
+        {
+          "id": "Z2",
+          "q": "Z2. Shopper Gender",
+          "type": "single",
+          "options": [
+            "Male",
+            "Female"
+          ]
+        },
+        {
+          "id": "Z3",
+          "q": "Z3. Nationality",
+          "type": "single",
+          "options": [
+            "Saudi",
+            "Arab Expat",
+            "Other"
+          ]
+        },
+        {
+          "id": "Z4",
+          "q": "Z4. Segment",
+          "type": "single",
+          "options": [
+            "Mass Segment",
+            "Gold Segment",
+            "Diamond Segment"
+          ]
+        },
+        {
+          "id": "Z4.1",
+          "q": "Z4.1. Please select the language used for the call",
+          "type": "single",
+          "options": [
+            "Arabic",
+            "English"
+          ]
+        },
+        {
+          "id": "Z5",
+          "q": "Z5. Scenario",
+          "type": "single",
+          "options": [
+            "Complaint",
+            "After Sales Inquiry",
+            "Service Request",
+            "Service Inquiry"
+          ]
+        },
+        {
+          "id": "Z5.sub",
+          "q": "What sub-scenario did you perform today?",
+          "type": "single",
+          "options": [
+            "Complaint about error in registration/login to the online account",
+            "Applying online to acquire a product but not hearing back from the bank",
+            "Mada Card wireless payment option is not working",
+            "Credit Card - statements transaction",
+            "Credit Card - monthly payment",
+            "Credit Card - card annual fee",
+            "Credit Card - card activation",
+            "Credit Card - Quseet program",
+            "Personal Loan - monthly payment",
+            "Personal Loan - outstanding amounts",
+            "Home Loan - monthly payment",
+            "Home Loan - outstanding amounts",
+            "Home Loan - paid amount",
+            "Update Card/Transaction Limit",
+            "Update Personal Information",
+            "Cheque Book Request",
+            "Activate Online Banking",
+            "Issue Mada Card",
+            "Add Beneficiary and International Transfer",
+            "Limit/Transaction Update",
+            "Deactivate Mada Card",
+            "Account Statement (more than 1 year) or Certificate Issuance"
+          ]
+        },
+        {
+          "id": "Z6",
+          "q": "Z6. Time of call (start)",
+          "type": "text"
+        },
+        {
+          "id": "Z7",
+          "q": "Z7. Time ending the call",
+          "type": "text"
+        },
+        {
+          "id": "Z8",
+          "q": "Z8. Call Date",
+          "type": "text"
+        },
+        {
+          "id": "Z9",
+          "q": "Z9. Call Day",
+          "type": "single",
+          "options": [
+            "Sunday",
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ivr",
+      "title": "IVR interaction",
+      "questions": [
+        {
+          "id": "IVR1",
+          "q": "Did you connect to Riyad Bank successfully from the first time?",
+          "type": "yes_no_na",
+          "options": [
+            "Yes",
+            "No"
+          ]
+        },
+        {
+          "id": "IVR1.n",
+          "q": "Dial the official Riyad Bank call center number. Document if the call connects on the first attempt without busy signals, disconnections, or network errors.",
+          "type": "note"
+        },
+        {
+          "id": "IVR1.why",
+          "q": "If you encountered issues during your initial attempt to connect, please mention the reason",
+          "type": "text"
+        },
+        {
+          "id": "IVR1.attempts",
+          "q": "Please record the number of attempts you made until the call successfully connected without any issues",
+          "type": "number"
+        },
+        {
+          "id": "IVR2",
+          "q": "Did you face any issues with your interaction with the IVR menu?",
+          "type": "yes_no_na",
+          "options": [
+            "Yes",
+            "No"
+          ]
+        },
+        {
+          "id": "IVR2.n",
+          "q": "Examples of issues: IVR not responding to keypad inputs, call routed to the incorrect department, language selection not functioning properly, or the call dropped/disconnected while entering options in the IVR.",
+          "type": "note"
+        },
+        {
+          "id": "IVR3",
+          "q": "Was it easy to understand and follow the IVR?",
+          "type": "yes_no_na",
+          "options": [
+            "Yes",
+            "No"
+          ]
+        },
+        {
+          "id": "IVR3.n",
+          "q": "Evaluate based on: clarity of instructions, logical menu structure, appropriate pacing, and successful navigation to the desired option.",
+          "type": "note"
+        },
+        {
+          "id": "IVR4",
+          "q": "Was the 'CSR agent' option clearly defined and easy to find on the IVR menu?",
+          "type": "yes_no_na",
+          "options": [
+            "Yes",
+            "No"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "phone_banking",
+      "title": "Phone Banking",
+      "questions": [
+        {
+          "id": "PB1",
+          "q": "Were you able to sign in to the Phone Banking service successfully?",
+          "type": "yes_no_na",
+          "options": [
+            "Yes",
+            "No"
+          ]
+        },
+        {
+          "id": "PB1.n",
+          "q": "After navigating to the Phone Banking option in the IVR, attempt to authenticate. Document the authentication method required, number of digits requested for PIN, additional security questions, and whether you received confirmation of successful login.",
+          "type": "note"
+        },
+        {
+          "id": "PB1.why",
+          "q": "If you encountered issues connecting via phone banking, please mention the reason",
+          "type": "text"
+        },
+        {
+          "id": "PB2.n",
+          "q": "Monitor for common banking system issues such as network interruptions or delayed responses. Document if OTP delivery is delayed or the system disconnects during authentication. Note any outages.",
+          "type": "note"
+        }
+      ]
+    },
+    {
+      "id": "reaching",
+      "title": "Reaching the Agent",
+      "questions": [
+        {
+          "id": "RA1",
+          "q": "Was your call successfully connected to a CSR on the first attempt after selecting the 'CSR' option from the IVR?",
+          "type": "yes_no_na",
+          "options": [
+            "Yes",
+            "No"
+          ]
+        },
+        {
+          "id": "RA1.attempts",
+          "q": "Please record the number of attempts you made until the call successfully connected without any issues",
+          "type": "number"
+        },
+        {
+          "id": "RA2",
+          "q": "Please record the waiting time per attempt",
+          "type": "text"
+        },
+        {
+          "id": "RA3",
+          "q": "Were you able to reach the CSR within 4 seconds? (خلال 4 ثواني)",
+          "type": "yes_no_na",
+          "options": [
+            "Yes",
+            "No"
+          ]
+        },
+        {
+          "id": "RA3.n",
+          "q": "Riyad Bank to confirm established SLAs for reaching the agent.",
+          "type": "note"
+        },
+        {
+          "id": "RA4",
+          "q": "In case you have waited, did the CSR apologize for the waiting time?",
+          "type": "yes_no_na",
+          "options": [
+            "Yes",
+            "No"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "opening",
+      "title": "Call Opening",
+      "questions": [
+        {
+          "id": "CO1",
+          "q": "Did the CSR mention Riyad Bank's name in the greeting?",
+          "type": "yes_no_na",
+          "options": [
+            "Yes",
+            "No"
+          ]
+        },
+        {
+          "id": "CO2",
+          "q": "Did the CSR state their own name?",
+          "type": "yes_no_na",
+          "options": [
+            "Yes",
+            "No"
+          ]
+        },
+        {
+          "id": "CO3",
+          "q": "Did the CSR ask 'How can I help you'?",
+          "type": "yes_no_na",
+          "options": [
+            "Yes",
+            "No"
+          ]
+        },
+        {
+          "id": "CO4",
+          "q": "Did the agent ask you for your name?",
+          "type": "yes_no_na",
+          "options": [
+            "Yes",
+            "No"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "attitude",
+      "title": "CSR Attitude",
+      "questions": [
+        {
+          "id": "CA1",
+          "q": "Was the CSR able to communicate in the language you prefer (Arabic or English)?",
+          "type": "yes_no_na",
+          "options": [
+            "Yes",
+            "No"
+          ]
+        },
+        {
+          "id": "CA1.b",
+          "q": "If the CSR wasn't able to communicate in your preferred language on the first attempt, select what applied",
+          "type": "multi",
+          "options": [
+            "You were redirected to the IVR menu to choose the language again",
+            "The call was cut off with no clear reason",
+            "Agent couldn't communicate with you"
+          ]
+        },
+        {
+          "id": "CA2",
+          "q": "Was the CSR tone clear and understandable during the call?",
+          "type": "yes_no_na",
+          "options": [
+            "Yes",
+            "No"
+          ]
+        },
+        {
+          "id": "CA3",
+          "q": "Did the CSR give you full attention during the call?",
+          "type": "yes_no_na",
+          "options": [
+            "Yes",
+            "No"
+          ]
+        },
+        {
+          "id": "CA4",
+          "q": "Did the CSR have a helpful attitude during the call today?",
+          "type": "yes_no_na",
+          "options": [
+            "Yes",
+            "No"
+          ]
+        },
+        {
+          "id": "CA5",
+          "q": "Was the CSR polite during the call today?",
+          "type": "yes_no_na",
+          "options": [
+            "Yes",
+            "No"
+          ]
+        },
+        {
+          "id": "CA6",
+          "q": "Was there too much noise from other CSRs in the background?",
+          "type": "yes_no_na",
+          "options": [
+            "Yes",
+            "No"
+          ]
+        },
+        {
+          "id": "CA7",
+          "q": "Did the agent use your name during the interaction?",
+          "type": "yes_no_na",
+          "options": [
+            "Yes",
+            "No"
+          ]
+        },
+        {
+          "id": "CA8",
+          "q": "Did the agent stay silent for more than 10 seconds during the call?",
+          "type": "yes_no_na",
+          "options": [
+            "Yes",
+            "No"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "knowledge_complaint",
+      "title": "CSR Knowledge — Complaint",
+      "applies_when": {
+        "Z5": "Complaint"
+      },
+      "questions": [
+        {
+          "id": "KC1",
+          "q": "Did the CSR ask you questions to identify the exact problem?",
+          "type": "yes_no_na",
+          "options": [
+            "Yes",
+            "No"
+          ]
+        },
+        {
+          "id": "KC1.n",
+          "q": "Document the specific questions asked by the CSR (what/when/how often/error messages/steps already tried).",
+          "type": "note"
+        },
+        {
+          "id": "KC2",
+          "q": "Did the CSR identify the issue successfully?",
+          "type": "yes_no_na",
+          "options": [
+            "Yes",
+            "No"
+          ]
+        },
+        {
+          "id": "KC2.n",
+          "q": "Evaluate if the agent correctly understood and articulated your problem; summarized it accurately; identified the root cause.",
+          "type": "note"
+        },
+        {
+          "id": "KC3",
+          "q": "Did the CSR show any empathy towards your complaint by apologizing or showing that they understand your frustration?",
+          "type": "yes_no_na",
+          "options": [
+            "Yes",
+            "No"
+          ]
+        },
+        {
+          "id": "KC3.n",
+          "q": "Document exact empathetic phrases used (tone, acknowledgement of inconvenience, apology).",
+          "type": "note"
+        },
+        {
+          "id": "KC4",
+          "q": "Did the agent try to provide you with a solution first before raising the complaint?",
+          "type": "yes_no_na",
+          "options": [
+            "Yes",
+            "No"
+          ]
+        },
+        {
+          "id": "KC4.n",
+          "q": "Document if the agent offered immediate resolution options or alternatives before formal complaint logging.",
+          "type": "note"
+        },
+        {
+          "id": "KC5",
+          "q": "Did the CSR log a complaint or confirm that they logged a complaint?",
+          "type": "yes_no_na",
+          "options": [
+            "Yes",
+            "No"
+          ]
+        },
+        {
+          "id": "KC5.n",
+          "q": "Document if the agent explicitly stated they are logging a complaint. Record any reference number, expected resolution timeframe, and follow-up process explained.",
+          "type": "note"
+        }
+      ]
+    },
+    {
+      "id": "complaint_resolution",
+      "title": "Complaint Resolution",
+      "applies_when": {
+        "Z5": "Complaint"
+      },
+      "questions": [
+        {
+          "id": "CR1",
+          "q": "Did you receive an SMS with your complaint's reference number?",
+          "type": "yes_no_na",
+          "options": [
+            "Yes",
+            "No"
+          ]
+        },
+        {
+          "id": "CR2",
+          "q": "How long did it take the customer care department to reach out to you after submitting your complaint? (expected: no later than 7 working days)",
+          "type": "text"
+        },
+        {
+          "id": "CR3",
+          "q": "Did you receive a follow-up regarding your complaint either via SMS or call? If yes, please mention how",
+          "type": "text"
+        },
+        {
+          "id": "CR4",
+          "q": "Was your complaint resolved successfully?",
+          "type": "yes_no_na",
+          "options": [
+            "Yes",
+            "No"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "knowledge_after_sales",
+      "title": "CSR Knowledge — After Sales Inquiry",
+      "applies_when": {
+        "Z5": "After Sales Inquiry"
+      },
+      "questions": [
+        {
+          "id": "AS1",
+          "q": "Did the CSR ask you questions to understand your inquiry?",
+          "type": "yes_no_na",
+          "options": [
+            "Yes",
+            "No"
+          ]
+        },
+        {
+          "id": "AS1.n",
+          "q": "Document the specific questions asked.",
+          "type": "note"
+        },
+        {
+          "id": "AS2",
+          "q": "Did the CSR provide you with a clear answer to your inquiry?",
+          "type": "yes_no_na",
+          "options": [
+            "Yes",
+            "No"
+          ]
+        },
+        {
+          "id": "AS2.n",
+          "q": "Evaluate completeness, accuracy, clarity.",
+          "type": "note"
+        },
+        {
+          "id": "AS3",
+          "q": "Did the CSR provide you with a clear explanation on how to find the answer to such inquiries using digital channels for next time?",
+          "type": "yes_no_na",
+          "options": [
+            "Yes",
+            "No"
+          ]
+        },
+        {
+          "id": "AS3.n",
+          "q": "Document navigation steps provided.",
+          "type": "note"
+        },
+        {
+          "id": "AS4",
+          "q": "Did the CSR ask you if you needed further help or assistance?",
+          "type": "yes_no_na",
+          "options": [
+            "Yes",
+            "No"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "knowledge_service_request",
+      "title": "CSR Knowledge — Service Request",
+      "applies_when": {
+        "Z5": "Service Request"
+      },
+      "questions": [
+        {
+          "id": "SR1",
+          "q": "Did the CSR ask you questions to understand your request?",
+          "type": "yes_no_na",
+          "options": [
+            "Yes",
+            "No"
+          ]
+        },
+        {
+          "id": "SR1.n",
+          "q": "Document the questions asked.",
+          "type": "note"
+        },
+        {
+          "id": "SR2",
+          "q": "Did the CSR explain the steps they will follow to complete the transaction?",
+          "type": "yes_no_na",
+          "options": [
+            "Yes",
+            "No"
+          ]
+        },
+        {
+          "id": "SR2.n",
+          "q": "Document process sequence, timeline, requirements.",
+          "type": "note"
+        },
+        {
+          "id": "SR3",
+          "q": "Did the CSR handle your service request successfully?",
+          "type": "yes_no_na",
+          "options": [
+            "Yes",
+            "No"
+          ]
+        },
+        {
+          "id": "SR3.n",
+          "q": "Evaluate if the agent completed all necessary steps.",
+          "type": "note"
+        },
+        {
+          "id": "SR4",
+          "q": "Did the CSR confirm that the process was completed?",
+          "type": "yes_no_na",
+          "options": [
+            "Yes",
+            "No"
+          ]
+        },
+        {
+          "id": "SR4.n",
+          "q": "Document how the agent confirmed completion.",
+          "type": "note"
+        },
+        {
+          "id": "SR5",
+          "q": "Did the CSR provide you with additional information and ask if you needed further help?",
+          "type": "yes_no_na",
+          "options": [
+            "Yes",
+            "No"
+          ]
+        },
+        {
+          "id": "SR5.n",
+          "q": "Note if agent provided related tips or suggestions.",
+          "type": "note"
+        },
+        {
+          "id": "SR6",
+          "q": "Did the CSR ensure your service request has been handled successfully?",
+          "type": "yes_no_na",
+          "options": [
+            "Yes",
+            "No"
+          ]
+        },
+        {
+          "id": "SR6.n",
+          "q": "Note if agent verified your satisfaction.",
+          "type": "note"
+        }
+      ]
+    },
+    {
+      "id": "knowledge_service_inquiry",
+      "title": "CSR Knowledge — Service Inquiry",
+      "applies_when": {
+        "Z5": "Service Inquiry"
+      },
+      "questions": [
+        {
+          "id": "SI1",
+          "q": "Did the CSR ask you questions to understand your inquiry?",
+          "type": "yes_no_na",
+          "options": [
+            "Yes",
+            "No"
+          ]
+        },
+        {
+          "id": "SI1.n",
+          "q": "Note what specific service you're interested in.",
+          "type": "note"
+        },
+        {
+          "id": "SI2",
+          "q": "Did the CSR provide you with a step-by-step guidance to complete your request?",
+          "type": "yes_no_na",
+          "options": [
+            "Yes",
+            "No"
+          ]
+        },
+        {
+          "id": "SI2.n",
+          "q": "Document the sequence of steps.",
+          "type": "note"
+        },
+        {
+          "id": "SI3",
+          "q": "Were the instructions given by the CSR clear?",
+          "type": "yes_no_na",
+          "options": [
+            "Yes",
+            "No"
+          ]
+        },
+        {
+          "id": "SI3.n",
+          "q": "Evaluate if instructions were easy to understand and actionable.",
+          "type": "note"
+        },
+        {
+          "id": "SI4",
+          "q": "Did the agent provide you with more than one channel for your services?",
+          "type": "yes_no_na",
+          "options": [
+            "Yes",
+            "No"
+          ]
+        },
+        {
+          "id": "SI4.n",
+          "q": "Document all channels mentioned.",
+          "type": "note"
+        }
+      ]
+    },
+    {
+      "id": "on_hold",
+      "title": "On-Hold",
+      "questions": [
+        {
+          "id": "OH1",
+          "q": "1. Did the agent put you on hold during the call? Please specify the reason",
+          "type": "text"
+        },
+        {
+          "id": "OH2",
+          "q": "2. Did the agent ask your permission to put you on hold?",
+          "type": "yes_no_na",
+          "options": [
+            "Yes",
+            "No"
+          ]
+        },
+        {
+          "id": "OH3",
+          "q": "3. Did the hold duration exceed 60 seconds?",
+          "type": "yes_no_na",
+          "options": [
+            "Yes",
+            "No"
+          ]
+        },
+        {
+          "id": "OH4",
+          "q": "4. If yes, did the agent come back and tell you to wait a little bit more?",
+          "type": "yes_no_na",
+          "options": [
+            "Yes",
+            "No"
+          ]
+        },
+        {
+          "id": "OH5",
+          "q": "5. Please record the exact time you were placed on hold",
+          "type": "text"
+        },
+        {
+          "id": "OH6",
+          "q": "6. Did the agent apologize/thank you for waiting and mention your name?",
+          "type": "yes_no_na",
+          "options": [
+            "Yes",
+            "No"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "quality",
+      "title": "Call Quality",
+      "questions": [
+        {
+          "id": "CQ1",
+          "q": "Did you encounter any technical difficulties during your call with the agent? Please mention any issues that you faced",
+          "type": "text"
+        },
+        {
+          "id": "CQ1.yn",
+          "q": "Technical difficulties encountered?",
+          "type": "yes_no_na",
+          "options": [
+            "Yes",
+            "No"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "closing",
+      "title": "Call Closing",
+      "questions": [
+        {
+          "id": "CL1",
+          "q": "Did the CSR ask if they can provide further assistance?",
+          "type": "yes_no_na",
+          "options": [
+            "Yes",
+            "No"
+          ]
+        },
+        {
+          "id": "CL2",
+          "q": "Did the agent mention your name during the closing?",
+          "type": "yes_no_na",
+          "options": [
+            "Yes",
+            "No"
+          ]
+        },
+        {
+          "id": "CL3",
+          "q": "Did the agent bid you farewell by saying 'Thank you for contacting Riyad Bank'?",
+          "type": "yes_no_na",
+          "options": [
+            "Yes",
+            "No"
+          ]
+        },
+        {
+          "id": "CL4",
+          "q": "Did the agent mention that the call will be transferred to the evaluation survey?",
+          "type": "yes_no_na",
+          "options": [
+            "Yes",
+            "No"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "overall",
+      "title": "Overall",
+      "questions": [
+        {
+          "id": "OV1",
+          "q": "Please rate your overall experience",
+          "type": "single",
+          "options": [
+            "1 - Very poor",
+            "2 - Poor",
+            "3 - Fair",
+            "4 - Good",
+            "5 - Very good"
+          ]
+        },
+        {
+          "id": "UP",
+          "q": "Upload Attachment",
+          "type": "text"
+        }
+      ]
+    }
+  ],
+  "conditional_followups": {
+    "rule": "Choosing a trigger answer on a Yes/No question reveals an extra required text question. When the trigger applies, ALWAYS write BOTH comments (the answer comment + the follow-up reason comment), stacked together, each with its own copy button.",
+    "confirmed": [
+      {
+        "parent": "PB1",
+        "trigger": "No",
+        "followup": "PB1.why",
+        "label": "It appears you encountered some issues during your initial attempt to connect via phone banking. Please mention the reason"
+      },
+      {
+        "parent": "OH3",
+        "trigger": "Yes",
+        "followup": "OH4",
+        "label": "4. If yes, did the agent come back and tell you to wait a little bit more? / في حال انتظرت أكثر من 60 ثانية هل رجع الموظف واعتذر منك وطلب أن تبقى على الانتظار أكثر؟",
+        "note": "OH4 appears only after OH3 = Yes. Answer it right away (OH4 has its own Yes/No + comment)."
+      }
+    ],
+    "likely_unverified": [
+      {
+        "parent": "IVR1",
+        "trigger": "No",
+        "followup": "IVR1.why"
+      },
+      {
+        "parent": "OH1",
+        "trigger": "Yes",
+        "followup": "reason (hold)"
+      }
+    ]
+  }
+}

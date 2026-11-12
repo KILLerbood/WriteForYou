@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" href="/logo.png">
+  <title>WriteForYou — مكتب الوكلاء</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<canvas id="bg" aria-hidden="true"></canvas>
+<div class="shell">
+<header class="top">
+  <a class="brand" href="#office">
+    <span class="logo"><img src="/logo.png" alt="WriteForYou"></span>
+    <div><b>WriteForYou</b><small>مكتب الوكلاء</small></div>
+  </a>
+  <nav class="nav" id="nav">
+    <a href="#office" data-page="office"><i>🏢</i> المكتب</a>
+    <a href="#orders" data-page="orders"><i>📋</i> الأوردرات <em id="navCount">0</em></a>
+    <a href="#upload" data-page="upload"><i>⬆️</i> رفع ملفات</a>
+    <span class="nav-ink" id="navInk"></span>
+  </nav>
+  <div class="top-actions">
+    <span id="demoBadge" class="badge demo hidden">وضع التجربة</span>
+    <button id="btnDemo" class="btn ghost">▶ تجربة العرض</button>
+    <button class="btn bell" id="btnBell" type="button" title="الإشعارات">🔔 <em id="bellCount" class="hidden">0</em></button>
+    <button class="btn" id="btnSheet" type="button">📊 Excel</button>
+    <a class="btn" href="/knowledge/team-playbook.md" target="_blank">📘 الدليل</a>
+    <button id="btnCopy" class="btn">📋 أمر التشغيل</button>
+  </div>
+</header>
+<div class="notice" id="notice"></div>
+<div id="notifPanel" class="notif hidden" role="dialog" aria-label="الإشعارات">
+  <div class="notif-head"><b>🔔 الإشعارات</b><button class="btn small" id="notifReadAll" type="button">اقرأ الكل</button></div>
+  <div id="notifList" class="notif-list"></div>
+  <div class="notif-key"><span><i style="background:#16a34a"></i>جاهز</span><span><i style="background:#f5b400"></i>في المراجعة</span><span><i style="background:#dc2626"></i>ناقص ملفات / مشكلة</span></div>
+</div>
+<div id="toasts" class="toasts" aria-live="polite"></div>
+
+<main>
+<!-- ============ PAGE: OFFICE ============ -->
+<section class="page" id="page-office" data-page="office">
+  <div class="office-layout">
+    <div class="card office-card">
+      <div class="office-stage" id="officeStage">
+        <canvas id="office" aria-label="مكتب الوكلاء ثلاثي الأبعاد"></canvas>
+        <div class="hud hud-top" id="hudKpis"></div>
+        <div class="hud hud-bottom">
+          <div class="legend">
+            <span><i class="dot work"></i> شغال</span><span><i class="dot wait"></i> مستني</span><span><i class="dot idle"></i> فاضي</span><span><i class="dot err"></i> مشكلة</span>
+          </div>
+          <div class="hud-tools">
+            <button class="tool" id="btnRotate">⟳ تدوير</button>
+            <span class="hint">اسحب للتدوير · العجلة للتقريب · اضغط على أي ملف لفتحه</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <aside class="card ceo">
+      <h2>المدير التنفيذي <small>Claude</small></h2>
+      <p class="muted small">اكتب أمرك هنا أو ارفع أوردر، وبيتحط في طابور Claude. الرد بيظهر هنا في المحادثة أول ما Claude ياخده.</p>
+      <div id="chat" class="chat"></div>
+      <div class="chips">
+        <button class="chip" data-q="اشتغل على كل المشاريع الجديدة">كل الجديد</button>
+        <button class="chip" data-q="كمّل المشاريع الواقفة من آخر مرحلة وصلت لها">كمّل الواقف</button>
+        <button class="chip" data-q="جهّز خطة الفورم بس ومتبعتش حاجة">جهّز الفورم</button>
+      </div>
+      <form id="orderForm" class="order-form">
+        <textarea id="orderText" rows="2" placeholder="اكتب أمرك للمدير…"></textarea>
+        <button class="btn primary" type="submit">أرسل الأمر</button>
+      </form>
+    </aside>
+  </div>
+  <div class="card agents-card"><h2>لوحة التحكم — الفريق</h2><div id="agents" class="agents"></div></div>
+</section>
+
+<!-- ============ PAGE: ORDERS ============ -->
+<section class="page" id="page-orders" data-page="orders">
+  <div class="card orders-card">
+    <div class="orders-head">
+      <h2>كل الأوردرات</h2>
+      <div class="searchbox"><span>🔍</span><input id="jobSearch" type="search" inputmode="numeric" placeholder="ابحث برقم الـ Job ID أو الاسم…" autocomplete="off"></div>
+    </div>
+    <div id="jobs" class="jobs"></div>
+  </div>
+  <div class="card detail-card">
+    <div id="detailHead"></div>
+    <div id="detailTabs" class="tabs"></div>
+    <div id="detailBody" class="tab-body"></div>
+  </div>
+</section>
+
+<!-- ============ PAGE: UPLOAD ============ -->
+<section class="page" id="page-upload" data-page="upload">
+  <form id="uploadForm" class="card upload-card">
+    <h2>رفع شغل جديد</h2>
+    <p class="muted small">كل الملفات في مكان واحد: التسجيل الصوتي، سكرين شوتس الواتساب، وصور الفورم. تقدر كمان تلصق الصور مباشرة بـ <b>Ctrl + V</b>.</p>
+    <div class="row">
+      <label>الوجهة <select id="upTarget"><option value="new">أوردر جديد</option></select></label>
+      <label id="nameWrap">Job ID <input id="upJobNo" type="text" inputmode="numeric" placeholder="149134"></label>
+    </div>
+    <label id="nameWrap2">اسم الأوردر (اختياري) <input id="upName" type="text" placeholder="Riyad Bank - Call Center"></label>
+    <div id="drop" class="drop" tabindex="0">
+      <input id="upFiles" type="file" multiple accept="audio/*,video/*,image/*,.zip,.pdf" hidden>
+      <div class="drop-ico">⬆</div>
+      <b>اسحب كل الملفات هنا</b>
+      <span>أو <u>اختارها من جهازك</u> · أو الصق الصور بـ Ctrl + V</span>
+      <small>صوت · صور · فيديو · zip</small>
+    </div>
+    <div id="picked" class="picked"></div>
+    <label id="notesWrap">ملاحظات / تعليمات للوكلاء <textarea id="upNotes" rows="2" placeholder="أي تعليمات…"></textarea></label>
+    <button class="btn primary big" type="submit" id="upBtn">🚀 ارفع وابعت لـ Claude</button>
+    <div id="upProgress" class="up-progress"></div>
+  </form>
+  <aside class="card upload-side">
+    <h3>إزاي الرفع بيشتغل؟</h3>
+    <ol class="steps">
+      <li><b>ارفع</b> التسجيل والصور هنا مع الـ Job ID.</li>
+      <li>الأوردر <b>بيتبعت لـ Claude</b> لوحده في الطابور.</li>
+      <li>الفريق يسمع ويكتب الفورم، وتلاقي <b>PDF</b> جاهز في صفحة الأوردرات.</li>
+    </ol>
+  </aside>
+  <div id="deliver" class="deliver hidden">
+    <div class="dl-track" dir="ltr">
+      <div class="dl-start">📁<small>ملفاتك</small></div>
+      <div class="dl-lane">
+        <div class="dl-run" id="dlRun">
+          <span class="dl-file" id="dlFile">📁</span>
+          <img class="dl-duck lead" src="/duck.png" alt="">
+          <img class="dl-duck kid k1" src="/duck.png" alt="">
+          <img class="dl-duck kid k2" src="/duck.png" alt="">
+          <img class="dl-duck kid k3" src="/duck.png" alt="">
+        </div>
+      </div>
+      <div class="dl-end" id="dlEnd">🧠<small>Claude</small></div>
+    </div>
+    <div class="dl-bar"><i id="dlBar"></i></div>
+    <div class="dl-text" id="dlText"></div>
+    <button type="button" class="btn primary big" id="dlGo">👀 روح للبطة الـ CEO في المكتب وشوفهم بيشتغلوا</button>
+  </div>
+</section>
+</main>
+</div>
+
+<script type="importmap">{"imports":{"three":"/vendor/three.module.js","three/addons/":"/vendor/addons/"}}</script>
+<script type="module" src="bg3d.js"></script>
+<script type="module" src="office3d.js"></script>
+<script type="module" src="app.js"></script>
+
+  <div id="sheet" class="sheet hidden" role="dialog" aria-label="سجل الأوردرات">
+    <div class="sheet-box">
+      <div class="sheet-head">
+        <b>📊 سجل الأوردرات (Excel)</b>
+        <div class="sheet-tabs" id="sheetTabs"><button data-st="jobs" class="on">الأوردرات</button><button data-st="answers">الإجابات</button><button data-st="files">الملفات</button></div>
+        <input id="sheetQ" type="search" placeholder="🔍 دوّر برقم الأوردر أو أي كلمة...">
+        <a class="btn small" href="/api/excel" download>⬇ تحميل الملف</a>
+        <button class="btn small" id="sheetClose" type="button">✕ قفل</button>
+      </div>
+      <div class="sheet-body" id="sheetBody"></div>
+    </div>
+  </div>
+</body>
+</html>
