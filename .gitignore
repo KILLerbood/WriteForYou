@@ -1,7 +1,2 @@
-# بيانات العملاء والتسجيلات - ما تترفعش على GitHub
-audio/
-inbox/
-data/
-jobs/
 node_modules/
 *.log
