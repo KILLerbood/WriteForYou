@@ -66,6 +66,7 @@
   function renderJobs() {
     const box = $('jobs');
     if (!state.jobs.length) { box.innerHTML = '<div class="empty">مفيش مشاريع لسه. ارفع أول مشروع من الفورم اللي على الجنب.</div>'; return; }
+    const ae0 = document.activeElement; if (ae0 && ae0.classList && ae0.classList.contains('st-sel') && box.contains(ae0)) return;
     const q = (($('jobSearch') || {}).value || '').trim().replace(/^#/, '').toLowerCase();
     const list = q ? state.jobs.filter((j) => String(j.jobNumber || '').toLowerCase().includes(q) || String(j.name || '').toLowerCase().includes(q) || String(j.id).toLowerCase().includes(q)) : state.jobs;
     if (!list.length) { box.innerHTML = '<div class="empty">مفيش شغل بالرقم ده: ' + esc(q) + '</div>'; refreshTargets(); return; }
@@ -75,6 +76,7 @@
         <div class="meta">${j.files.length} ملف · ${esc(j.task || '')}</div>
         ${typeof j.progress === 'number' ? `<div class="prog"><i style="width:${Math.max(0, Math.min(100, j.progress))}%"></i></div>` : ''}
         ${stepper(j)}
+        ${window.WFY_STATIC ? '' : `<div class="job-actions"><select class="st-sel" title="تغيير الحالة">${Object.entries(STATUS_AR).map(([k, v]) => `<option value="${k}" ${k === j.status ? 'selected' : ''}>${v}</option>`).join('')}</select><button type="button" class="del-job" title="حذف الأوردر">🗑 حذف</button></div>`}
       </div>`).join('');
     refreshTargets();
   }
@@ -528,7 +530,25 @@
 
   // ---------- wire up ----------
   window.Office.init($('office'), select);
-  $('jobs').addEventListener('click', (e) => { const el = e.target.closest('.job'); if (el) select(el.dataset.id); });
+  $('jobs').addEventListener('click', async (e) => {
+    const el = e.target.closest('.job'); if (!el) return;
+    if (e.target.closest('.job-actions')) {
+      const id = el.dataset.id;
+      const j = state.jobs.find((x) => x.id === id) || {};
+      if (e.target.closest('.del-job')) {
+        if (!confirm('تحذف الأوردر ' + (j.jobNumber ? '#' + j.jobNumber : id) + '؟ هيتنقل لسلة المحذوفات.')) return;
+        try { await api('/api/jobs/' + encodeURIComponent(id), { method: 'DELETE' }); if (selected === id) selected = null; await poll(); } catch { alert('فشل الحذف'); }
+      }
+      return;
+    }
+    select(el.dataset.id);
+  });
+  $('jobs').addEventListener('change', async (e) => {
+    const sel = e.target.closest && e.target.closest('.st-sel'); if (!sel) return;
+    const id = sel.closest('.job').dataset.id;
+    try { await api('/api/jobs/' + encodeURIComponent(id) + '/status', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ status: sel.value }) }); sel.blur(); await poll(); }
+    catch { alert('فشل تغيير الحالة'); }
+  });
   $('detailTabs').addEventListener('click', (e) => { const b = e.target.closest('.tab'); if (b) { tab = b.dataset.tab; detailSig = ''; renderDetail(); } });
   $('upTarget').addEventListener('change', refreshTargets);
   $('uploadForm').addEventListener('submit', submitUpload);

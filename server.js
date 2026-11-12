@@ -170,6 +170,33 @@ async function handleApi(req, res, u) {
 
     if (m === 'GET' && parts.length === 3) return send(res, 200, loadJob(id));
 
+    if (m === 'POST' && parts[3] === 'status' && parts.length === 4) {
+      let body = {};
+      try { body = JSON.parse(await readBody(req)); } catch {}
+      const ALLOWED = ['queued', 'working', 'waiting_approval', 'saved', 'done', 'error'];
+      const status = String(body.status || '');
+      if (!ALLOWED.includes(status)) return send(res, 400, { error: 'bad status' });
+      const sf = path.join(jobDir(id), 'status.json');
+      const cur = readJSON(sf, {}) || {};
+      const now = new Date().toISOString();
+      const next = { ...cur, status, updatedAt: now };
+      if (status === 'done') { next.stage = 'done'; next.progress = 100; }
+      if (status === 'saved') { next.ipsosSaved = true; next.ipsosSavedAt = cur.ipsosSavedAt || now; }
+      writeJSON(sf, next);
+      fs.appendFileSync(path.join(jobDir(id), 'log.jsonl'), JSON.stringify({ ts: now, agent: 'user', level: 'info', msg: `الحالة اتغيّرت بإيدك من لوحة التحكم: ${status}` }) + '\n');
+      return send(res, 200, loadJob(id));
+    }
+
+    if (m === 'DELETE' && parts.length === 3) {
+      const trash = path.join(JOBS, '_trash');
+      fs.mkdirSync(trash, { recursive: true });
+      let dest = path.join(trash, id);
+      if (fs.existsSync(dest)) dest = path.join(trash, id + '-' + Date.now());
+      fs.renameSync(jobDir(id), dest);
+      return send(res, 200, { ok: true, trashed: path.basename(dest) });
+    }
+
+
     // Raw-body upload: POST /api/jobs/:id/upload?name=<file name>
     if (m === 'POST' && parts[3] === 'upload') {
       const name = safeName(u.searchParams.get('name'));

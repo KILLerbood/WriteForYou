@@ -205,3 +205,5 @@ textarea:focus,input:focus,select:focus{border-color:var(--yellow-d);box-shadow:
 .fq-q.ar{margin-top:2px;color:var(--ink,#1b2150);font-weight:700;text-align:right}
 
 .chipst.saved{background:#dcfce7;color:#166534;border:1px solid #16a34a}
+
+.job-actions{display:flex;gap:8px;margin-top:8px;align-items:center}.job-actions .st-sel{flex:1;font:inherit;font-size:12.5px;padding:5px 8px;border:1px solid #e5d9b6;border-radius:10px;background:#fffdf5;cursor:pointer}.job-actions .del-job{font:inherit;font-size:12.5px;padding:5px 11px;border:1px solid #fca5a5;border-radius:10px;background:#fff1f1;color:#b91c1c;cursor:pointer}.job-actions .del-job:hover{background:#fee2e2}

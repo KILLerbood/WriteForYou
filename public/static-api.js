@@ -1,5 +1,6 @@
 // وضع القراءة فقط لصفحة GitHub Pages: بيحوّل نداءات /api/ لملفات ثابتة في الريبو
 (() => {
+  window.WFY_STATIC = true;
   const R = '../';
   const map = (u) => {
     let m;
