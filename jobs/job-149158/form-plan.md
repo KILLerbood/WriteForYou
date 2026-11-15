@@ -1,0 +1,1 @@
+Job 149158 — Complaint / Mada wireless not working. Assumptions: CO1 clipped audio (Yes), IVR2 Yes (one invalid-option message), Segment Mass, RA2 1:53 computed from transfer message to agent answer.

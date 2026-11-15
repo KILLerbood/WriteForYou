@@ -1,0 +1,1 @@
+Job 149157 — Service Inquiry / Issue Mada Card. Assumptions: name not in call (—), date 11/09 from file time, IVR2-4 + RA2/RA3 assumed (recording starts mid-IVR), Segment Mass.

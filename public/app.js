@@ -334,7 +334,43 @@
       return `<div class="pk">${th}<button type="button" data-rm="${i}" title="شيل">×</button><div class="nm">${esc(f.name)}</div><div class="sz">${fmtSize(f.size)}</div></div>`;
     }).join('');
   }
-  function addFiles(list) { picked = picked.concat([...list]); renderPicked(); }
+  // الـ Job ID = أول 6 أرقام (5-7) في اسم الفولدر أو الملف. الاسم اللي جنبه يتحط في اسم الأوردر. مثال: "149149 - Laila"
+  const BAD_NAME = /^(audio|video|whatsapp|screenshot|img|image|photo|ptt|pasted)\b/i;
+  function parseName(txt) {
+    const base = String(txt || '').replace(/\.[^.\/]+$/, '');
+    const m = base.match(/(?<!\d)\d{5,7}(?!\d)/); if (!m) return null;
+    const name = base.replace(m[0], ' ').replace(/[_\-+()[\]{}.,]+/g, ' ').replace(/\s+/g, ' ').trim();
+    return { num: m[0], name: BAD_NAME.test(name) ? '' : name };
+  }
+  function parseFile(f) {
+    const rp = f.webkitRelativePath ? f.webkitRelativePath.split('/') : [];
+    const src = f._src || (rp.length > 1 ? rp[0] : '');
+    return (src && parseName(src)) || parseName(f.name);
+  }
+  function autoFillFromFiles(files) {
+    if (!$('upTarget') || $('upTarget').value !== 'new') return;
+    const seen = []; files.forEach((f) => { const r = parseFile(f); if (r && !seen.find((x) => x.num === r.num)) seen.push(r); });
+    if (!seen.length) return;
+    $('upJobNo').value = seen.map((r) => r.num).join(', ');
+    $('upName').value = seen.length === 1 ? seen[0].name : seen.map((r) => r.name).filter(Boolean).join(' / ');
+    let hint = $('autoFillHint');
+    if (!hint) { hint = document.createElement('div'); hint.id = 'autoFillHint'; hint.className = 'muted small'; $('picked').parentElement.insertBefore(hint, $('picked')); }
+    hint.textContent = '✔ اتعبّى لوحده: ' + seen.map((r) => 'Job ' + r.num + (r.name ? ' (' + r.name + ')' : '')).join(' · ');
+  }
+  function addFiles(list) { const arr = [...list]; picked = picked.concat(arr); renderPicked(); autoFillFromFiles(picked); }
+  // سحب فولدرات كاملة
+  async function filesFromDrop(dt) {
+    const items = [...(dt.items || [])].map((i) => (i.webkitGetAsEntry ? i.webkitGetAsEntry() : null));
+    if (!items.length || !items.some((en) => en && en.isDirectory)) return [...dt.files];
+    const out = [];
+    const readAll = (rd) => new Promise((res, rej) => { const acc = []; const step = () => rd.readEntries((b) => (b.length ? (acc.push(...b), step()) : res(acc)), rej); step(); });
+    const walk = async (en, top) => {
+      if (en.isFile) { const f = await new Promise((res, rej) => en.file(res, rej)); f._src = top; out.push(f); }
+      else if (en.isDirectory) { for (const c of await readAll(en.createReader())) await walk(c, top || en.name); }
+    };
+    for (const en of items) if (en) await walk(en, en.isDirectory ? en.name : '');
+    return out;
+  }
   function xhrUpload(jobId, file, onProg) {
     return new Promise((resolve, reject) => {
       const x = new XMLHttpRequest();
@@ -384,24 +420,33 @@
     const prog = $('upProgress'); prog.innerHTML = '';
     try {
       let id = $('upTarget').value;
+      const groups = [];
       if (id === 'new') {
-        const num = String($('upJobNo').value || '').trim().replace(/[^A-Za-z0-9_-]/g, '');
-        const ex = num && state.jobs.find((x) => x.id === 'job-' + num || x.jobNumber === num);
-        if (ex) {
-          id = ex.id;
-          prog.insertAdjacentHTML('beforeend', '<div class="ln">الأوردر ' + esc(num) + ' موجود، هضيف الملفات عليه.</div>');
-        } else {
-          const j = await (await api('/api/jobs', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ jobNumber: $('upJobNo').value, name: $('upName').value || ('Job ' + $('upJobNo').value), notes: $('upNotes').value }) })).json();
-          id = j.id;
-        }
-      }
+        const typed = String($('upJobNo').value || '').split(/[,\s]+/).filter(Boolean)[0] || '';
+        const gm = new Map();
+        picked.forEach((f) => { const r = parseFile(f); const num = (r && r.num) || typed.replace(/[^A-Za-z0-9_-]/g, ''); const nm = (r && r.name) || ''; if (!gm.has(num)) gm.set(num, { num, name: nm, files: [] }); gm.get(num).files.push(f); });
+        gm.forEach((g) => groups.push(g));
+      } else groups.push({ id, files: picked.slice() });
       let doneN = 0; const totalN = picked.length;
-      for (const f of picked) {
-        const row = document.createElement('div');
-        row.innerHTML = `<div class="ln">${esc(f.name)}</div><div class="bar"><i></i></div>`; prog.appendChild(row);
-        await xhrUpload(id, f, (p) => { row.querySelector('i').style.width = Math.round(p * 100) + '%'; dlCarry((doneN + p) / totalN); });
-        doneN++;
-        row.querySelector('i').style.width = '100%';
+      for (const [gi, g] of groups.entries()) {
+        if (!g.id) {
+          const ex = g.num && state.jobs.find((x) => x.id === 'job-' + g.num || x.jobNumber === g.num);
+          if (ex) { g.id = ex.id; prog.insertAdjacentHTML('beforeend', '<div class="ln">الأوردر ' + esc(g.num) + ' موجود، هضيف الملفات عليه.</div>'); }
+          else {
+            const nm = g.name || (groups.length === 1 && $('upName').value) || ('Job ' + g.num);
+            const j = await (await api('/api/jobs', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ jobNumber: g.num, name: nm, notes: $('upNotes').value }) })).json();
+            g.id = j.id;
+          }
+        }
+        id = g.id;
+        for (const f of g.files) {
+          const row = document.createElement('div');
+          row.innerHTML = `<div class="ln">${esc((g.num ? g.num + ' / ' : '') + f.name)}</div><div class="bar"><i></i></div>`; prog.appendChild(row);
+          await xhrUpload(g.id, f, (p) => { row.querySelector('i').style.width = Math.round(p * 100) + '%'; dlCarry((doneN + p) / totalN); });
+          doneN++;
+          row.querySelector('i').style.width = '100%';
+        }
+        if (gi < groups.length - 1) { const jn2 = (state.jobs.find((x) => x.id === g.id) || {}).jobNumber || g.num || g.id; try { await api('/api/orders', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ text: `اشتغل على الأوردر ${jn2}: اسمع التسجيل وجهّز الفورم والـ PDF.`, jobId: g.id }) }); } catch {} }
       }
       picked = []; renderPicked(); $('upJobNo').value = ''; $('upName').value = ''; $('upNotes').value = '';
       const jn = (state.jobs.find((x) => x.id === id) || {}).jobNumber || id;
@@ -560,7 +605,7 @@
   $('upFiles').addEventListener('change', (e) => { addFiles(e.target.files); e.target.value = ''; });
   ['dragenter', 'dragover'].forEach((ev) => drop.addEventListener(ev, (e) => { e.preventDefault(); drop.classList.add('over'); }));
   ['dragleave', 'drop'].forEach((ev) => drop.addEventListener(ev, (e) => { e.preventDefault(); drop.classList.remove('over'); }));
-  drop.addEventListener('drop', (e) => addFiles(e.dataTransfer.files));
+  drop.addEventListener('drop', async (e) => addFiles(await filesFromDrop(e.dataTransfer)));
   let rot = false; $('btnRotate').addEventListener('click', () => { rot = !rot; window.Office.setAutoRotate(rot); $('btnRotate').classList.toggle('on', rot); });
   $('btnDemo').addEventListener('click', () => (demo ? stopDemo() : startDemo()));
   $('btnCopy').addEventListener('click', async () => {

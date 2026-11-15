@@ -1,0 +1,10 @@
+{"ts":"2026-11-15T01:52:13.180Z","agent":"intake","level":"info","msg":"استلمت المشروع: Job 149148"}
+{"ts":"2026-11-15T01:52:13.206Z","agent":"intake","level":"info","msg":"ملف جديد اترفع: 1.ogg"}
+{"ts":"2026-11-15T01:52:13.214Z","agent":"intake","level":"info","msg":"ملف جديد اترفع: 2.jpeg"}
+{"ts":"2026-11-15T01:52:13.228Z","agent":"intake","level":"info","msg":"ملف جديد اترفع: 3.jpeg"}
+{"ts":"2026-11-15T01:52:13.245Z","agent":"intake","level":"info","msg":"ملف جديد اترفع: 4.jpeg"}
+{"ts":"2026-11-15T01:52:13.258Z","agent":"intake","level":"info","msg":"ملف جديد اترفع: 5.jpeg"}
+{"ts":"2026-11-15T01:52:13.275Z","agent":"intake","level":"info","msg":"ملف جديد اترفع: 6.jpeg"}
+{"ts": "2026-11-15T02:10:00.000Z", "agent": "listener", "level": "info", "msg": "رفعت التسجيل على جيميناي (AI Studio) وجبت التفريغ: التسجيل 9:09 من 17 دقيقة، ناقص أول ~8 دقايق"}
+{"ts": "2026-11-15T02:15:00.000Z", "agent": "former", "level": "info", "msg": "جهزت الإجابات والتعليقات والـPDF، باقي تعبئة Ipsos وحفظ فقط"}
+{"ts": "2026-11-15T02:40:00.000Z", "agent": "former", "level": "info", "msg": "عبّيت استبيان Ipsos للأوردر 149148 وعملت Save فقط (مش Submit)"}

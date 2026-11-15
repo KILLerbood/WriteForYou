@@ -1,0 +1,11 @@
+Job 149156 — Rania — Gemini transcripts (2 recordings; audio only)
+Call B = first call (9:52 AM) to 800 1242225, 1:17 — scored in the form.
+[00:01] Agent: بنك الرياض، فاطمة معك، كيف أقدر أساعدك؟  [00:05] Caller: السلام عليكم.
+[00:05] Agent: وعليكم السلام والرحمة، تفضلي أستاذة، شرفيني باسمك. [00:08] Caller: رانيا العلي.
+[00:11] Agent: حياك الله أستاذة رانيا، كيف أقدر أساعدك؟
+[00:13] Caller: رافعة طلب فيزا مشتريات كذا مرة ولا أحد تواصل معاي.
+[00:22] Agent: حالياً تظهري لي غير معرفة... إذا قدمتي طلب بطاقة ائتمانية وما جتك الموافقة... عن طريق فروعنا أو قسم التسويق، أزودك برقم التسويق؟
+[00:45] Caller: أعطيني الرقم. [00:48] Agent: 800 1242020 [00:59] الرد الآلي خطوات
+[01:04] Agent: العفو يا أستاذة رانيا... أي خدمات ثانية؟ [01:11] شاكرة اتصالك ببنك الرياض ومعك التقييم.
+Call A = second call (9:56 AM) to 800 1242020 (Marketing), 3:19 — new credit card request taken by agent (Mastercard Platinum offer, SIMAH consent, salary/job details, promised follow-up by email). Not scored in this form.
+Holds: none. Silence >10s: none.
