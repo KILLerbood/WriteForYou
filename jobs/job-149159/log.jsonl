@@ -1,0 +1,8 @@
+{"ts":"2026-11-15T17:04:30.063Z","agent":"intake","level":"info","msg":"استلمت المشروع: Job 149159"}
+{"ts":"2026-11-15T17:04:30.106Z","agent":"intake","level":"info","msg":"ملف جديد اترفع: 1.amr"}
+{"ts":"2026-11-15T17:04:30.117Z","agent":"intake","level":"info","msg":"ملف جديد اترفع: 2.jpeg"}
+{"ts":"2026-11-15T17:04:30.126Z","agent":"intake","level":"info","msg":"ملف جديد اترفع: 3.jpeg"}
+{"ts":"2026-11-15T17:04:30.151Z","agent":"intake","level":"info","msg":"ملف جديد اترفع: 4.jpeg"}
+{"ts": "2026-11-15T17:08:00.000Z", "agent": "listener", "level": "info", "msg": "حضّرت الصوت ورفعته على جوجل AI Studio للتفريغ، وقريت الصور"}
+{"ts": "2026-11-15T17:20:00.000Z", "agent": "listener", "level": "info", "msg": "التفريغ اكتمل من AI Studio (12:13) وأكدت لحظات الختام"}
+{"ts": "2026-11-15T17:30:00.000Z", "agent": "former", "level": "info", "msg": "الإجابات جاهزة — شكوى تسجيل الدخول، والـ PDF اتعمل. جاري ملء Ipsos (Save فقط)"}

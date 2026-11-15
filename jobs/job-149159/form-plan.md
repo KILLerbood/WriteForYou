@@ -1,0 +1,1 @@
+Job 149159 — Complaint / login error (online account). Z8=11/15/2026 assumed from call-log "اليوم" (راجع التاريخ). OH5 = 4:12 + 04:32. CL3: كلمة "الرياض" مسموعة ولكن "بنك" غير واضحة → Yes. Transcript من Google AI Studio (رقم الهوية محجوب).

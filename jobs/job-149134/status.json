@@ -1,1 +1,8 @@
-{"stage": "approval", "status": "waiting_approval", "agent": "ceo", "task": "المسودة جاهزة — في انتظار اعتماد المدير", "progress": 90, "updatedAt": "2026-11-11T22:59:40.119607Z"}
+{
+  "stage": "done",
+  "status": "done",
+  "agent": "ceo",
+  "task": "المسودة جاهزة — في انتظار اعتماد المدير",
+  "progress": 100,
+  "updatedAt": "2026-11-15T17:06:15.347Z"
+}
