@@ -1,0 +1,321 @@
+{
+ "jobId": "149166",
+ "answers": {
+  "Z1": {
+   "question": "Z1. Shopper Name",
+   "answer": "نوف",
+   "why": "نوف",
+   "note": "",
+   "q_ar": "اسم المتسوق"
+  },
+  "Z2": {
+   "question": "Z2. Shopper Gender",
+   "answer": "Female",
+   "why": "متسوقة أنثى",
+   "note": "",
+   "q_ar": "جنس المتسوق"
+  },
+  "Z3": {
+   "question": "Z3. Nationality",
+   "answer": "Saudi",
+   "why": "سعودية الجنسية",
+   "note": "",
+   "q_ar": "الجنسية"
+  },
+  "Z4": {
+   "question": "Z4. Segment",
+   "answer": "Mass Segment",
+   "why": "من الشريحة العادية (Mass)",
+   "note": "",
+   "q_ar": "الشريحة"
+  },
+  "Z4.1": {
+   "question": "Z4.1. Language used for the call",
+   "answer": "Arabic",
+   "why": "جرت المكالمة باللغة العربية",
+   "note": "",
+   "q_ar": "لغة المكالمة"
+  },
+  "Z5": {
+   "question": "Z5. Scenario",
+   "answer": "Service Inquiry",
+   "why": "استفسار عن خدمة: طريقة إصدار كشف حساب لمدة سنة",
+   "note": "",
+   "q_ar": "السيناريو"
+  },
+  "Z5.sub": {
+   "question": "Sub-scenario",
+   "answer": "Account Statement (more than 1 year) or Certificate Issuance",
+   "why": "الاستفسار عن إصدار كشف الحساب",
+   "note": "",
+   "q_ar": "السيناريو الفرعي"
+  },
+  "Z6": {
+   "question": "Z6. Time of call",
+   "answer": "12:30:00",
+   "why": "بدأت المكالمة 12:30 ظهرًا",
+   "note": "",
+   "q_ar": "وقت بدء المكالمة"
+  },
+  "Z7": {
+   "question": "Z7. Time ending the call",
+   "answer": "12:32:00",
+   "why": "انتهت المكالمة 12:32 ظهرًا",
+   "note": "",
+   "q_ar": "وقت إنهاء المكالمة"
+  },
+  "Z8": {
+   "question": "Z8. Call Date",
+   "answer": "07/11/2026",
+   "why": "تاريخ المكالمة",
+   "note": "",
+   "q_ar": "تاريخ الاتصال"
+  },
+  "Z9": {
+   "question": "Z9. Call Day",
+   "answer": "Saturday",
+   "why": "السبت",
+   "note": "",
+   "q_ar": "يوم الاتصال"
+  },
+  "IVR1": {
+   "question": "Did you connect to Riyad Bank successfully from the first time?",
+   "answer": "Yes",
+   "why": "اتصلت برقم مركز الاتصال فجاءني الرد مباشرة من المحاولة الأولى دون انقطاع أو انشغال في الخط.",
+   "note": "",
+   "q_ar": "هل اتصلت ببنك الرياض بنجاح من المحاولة الأولى؟"
+  },
+  "IVR1.attempts": {
+   "question": "Number of attempts until connected",
+   "answer": "1",
+   "why": "كانت محاولة واحدة فقط، ولم يحدث أي انقطاع أو انشغال في الخط.",
+   "note": "",
+   "q_ar": "عدد المحاولات"
+  },
+  "IVR2": {
+   "question": "Any issues with the IVR?",
+   "answer": "No",
+   "why": "لم تواجهني أي مشكلة أثناء التنقل بين خيارات الرد الآلي.",
+   "note": "",
+   "q_ar": "هل واجهت مشكلات في الرد الآلي؟"
+  },
+  "IVR3": {
+   "question": "Was the IVR easy to understand & follow?",
+   "answer": "Yes",
+   "why": "كانت الخيارات مرتبة وواضحة، وسهل عليّ متابعتها حتى وصلت إلى خدمة العملاء.",
+   "note": "",
+   "q_ar": "هل كان الرد الآلي سهل الفهم والمتابعة؟"
+  },
+  "IVR4": {
+   "question": "Was the CSR option clearly defined and easy to find?",
+   "answer": "Yes",
+   "why": "ظهر خيار التحدث مع خدمة العملاء بوضوح في القائمة فاخترته دون تردد.",
+   "note": "",
+   "q_ar": "هل كان خيار الموظف واضحًا وسهل الوصول؟"
+  },
+  "PB1": {
+   "question": "Able to sign in to Phone Banking?",
+   "answer": "No",
+   "why": "لم يُطلب مني تسجيل الدخول إلى الهاتف المصرفي، إذ اخترت التحدث مباشرة مع خدمة العملاء.",
+   "note": "",
+   "q_ar": "هل تمكنت من تسجيل الدخول إلى الهاتف المصرفي؟",
+   "why2": "لم أسجل الدخول إلى الهاتف المصرفي لأنني لم أحتج إليه، فقد اتصلت للاستفسار عن كشف الحساب فقط، ولم تواجهني أي مشكلة تقنية."
+  },
+  "RA1": {
+   "question": "Connected to a CSR on the first attempt?",
+   "answer": "Yes",
+   "why": "بعد اختيار الخيار انتظرت قليلًا ثم ردّت عليّ موظفة خدمة العملاء من المحاولة الأولى.",
+   "note": "",
+   "q_ar": "هل تم توصيلك بموظف من المحاولة الأولى؟"
+  },
+  "RA1.attempts": {
+   "question": "Number of attempts until connected to the CSR",
+   "answer": "1",
+   "why": "تم تحويلي إلى الموظفة من المحاولة الأولى ولم أحتج إلى إعادة الاتصال.",
+   "note": "",
+   "q_ar": "عدد المحاولات حتى الوصول للموظف"
+  },
+  "RA2": {
+   "question": "Waiting time per attempt",
+   "answer": "00:00:26",
+   "why": "انتظرت نحو ست وعشرين ثانية حتى ردّت الموظفة.",
+   "note": "",
+   "q_ar": "وقت الانتظار لكل محاولة"
+  },
+  "RA3": {
+   "question": "Reached the CSR within 4 seconds?",
+   "answer": "No",
+   "why": "استغرق الوصول إلى الموظفة نحو ست وعشرين ثانية بعد رسالة الانتظار، أي أكثر من أربع ثوانٍ.",
+   "note": "",
+   "q_ar": "هل وصلت للموظف خلال 4 ثوانٍ؟"
+  },
+  "RA4": {
+   "question": "Did the CSR apologize for the waiting time?",
+   "answer": "No",
+   "why": "لم تعتذر الموظفة عن مدة الانتظار عندما ردّت على المكالمة.",
+   "note": "",
+   "q_ar": "هل اعتذر الموظف عن وقت الانتظار؟"
+  },
+  "CO1": {
+   "question": "CSR mentioned Riyad Bank's name in the greeting?",
+   "answer": "Yes",
+   "why": "ذكرت الموظفة اسم بنك الرياض في بداية ردها.",
+   "note": "",
+   "q_ar": "هل ذكر الموظف اسم بنك الرياض؟"
+  },
+  "CO2": {
+   "question": "CSR stated their own name?",
+   "answer": "No",
+   "why": "لم يكن اسم الموظفة مسموعًا بوضوح عند التحية فلم أستطع تحديده.",
+   "note": "",
+   "q_ar": "هل ذكر الموظف اسمه؟"
+  },
+  "CO3": {
+   "question": "CSR asked \"How can I help you\"?",
+   "answer": "Yes",
+   "why": "سألتني في التحية عن الطريقة التي تستطيع بها مساعدتي.",
+   "note": "",
+   "q_ar": "هل سأل \"كيف يمكنني مساعدتك؟\""
+  },
+  "CO4": {
+   "question": "Agent asked for your name?",
+   "answer": "No",
+   "why": "لم تسألني عن اسمي وانتقلنا مباشرة إلى استفساري.",
+   "note": "",
+   "q_ar": "هل طلب الموظف التعرف باسمك؟"
+  },
+  "CA1": {
+   "question": "CSR communicated in your preferred language?",
+   "answer": "Yes",
+   "why": "تحدثت معي باللغة العربية التي أفضلها دون أي صعوبة.",
+   "note": "",
+   "q_ar": "هل تواصل بلغتك المفضلة؟"
+  },
+  "CA2": {
+   "question": "CSR tone clear and understandable?",
+   "answer": "Yes",
+   "why": "كان صوتها واضحًا ومفهومًا طوال المكالمة.",
+   "note": "",
+   "q_ar": "هل كانت نبرة الموظف واضحة؟"
+  },
+  "CA3": {
+   "question": "CSR gave full attention?",
+   "answer": "Yes",
+   "why": "أصغت إلى استفساري بتركيز ولم تقاطعني.",
+   "note": "",
+   "q_ar": "هل منحك الموظف اهتمامه الكامل؟"
+  },
+  "CA4": {
+   "question": "CSR had a helpful attitude?",
+   "answer": "Yes",
+   "why": "أجابت بأسلوب متعاون وأوصلت لي المعلومة بسهولة.",
+   "note": "",
+   "q_ar": "هل كان الموظف متعاونًا؟"
+  },
+  "CA5": {
+   "question": "CSR was polite?",
+   "answer": "Yes",
+   "why": "كانت مهذبة في حديثها، وردّت على شكري بدعاء طيب.",
+   "note": "",
+   "q_ar": "هل كان الموظف مهذبًا؟"
+  },
+  "CA6": {
+   "question": "Too much background noise?",
+   "answer": "No",
+   "why": "لم أسمع أي أصوات أو ضوضاء في الخلفية أثناء المكالمة.",
+   "note": "",
+   "q_ar": "هل كان هناك ضجيج في الخلفية؟"
+  },
+  "CA7": {
+   "question": "Agent used your name during the interaction?",
+   "answer": "No",
+   "why": "لم تخاطبني باسمي في أي موضع من المكالمة.",
+   "note": "",
+   "q_ar": "هل خاطبك باسمك؟"
+  },
+  "CA8": {
+   "question": "Agent silent for more than 10 seconds?",
+   "answer": "No",
+   "why": "لم يحدث صمت طويل، وكان الحوار مستمرًا بشكل طبيعي.",
+   "note": "",
+   "q_ar": "هل صمت الموظف أكثر من 10 ثوانٍ؟"
+  },
+  "SI1": {
+   "question": "CSR asked questions to understand your inquiry?",
+   "answer": "No",
+   "why": "لم تطرح عليّ أسئلة لفهم استفساري، بل أجابت مباشرة عما سألت عنه.",
+   "note": "",
+   "q_ar": "هل سأل أسئلة لفهم استفسارك؟"
+  },
+  "SI2": {
+   "question": "Step-by-step guidance to complete your request?",
+   "answer": "Yes",
+   "why": "شرحت لي الخطوات: الدخول إلى التطبيق ثم قسم الحسابات ثم عرض كشف الحساب وإصداره.",
+   "note": "",
+   "q_ar": "هل قدّم إرشادات خطوة بخطوة؟"
+  },
+  "SI3": {
+   "question": "Were the instructions clear?",
+   "answer": "Yes",
+   "why": "كانت التعليمات بسيطة وواضحة، وأعادت الشرح عندما سألتها عن الطريقة الإلكترونية.",
+   "note": "",
+   "q_ar": "هل كانت التعليمات واضحة؟"
+  },
+  "SI4": {
+   "question": "More than one channel provided?",
+   "answer": "Yes",
+   "why": "ذكرت لي قناتين لإصدار الكشف، هما التطبيق وزيارة الفرع.",
+   "note": "",
+   "q_ar": "هل وفّر أكثر من قناة؟"
+  },
+  "OH1": {
+   "question": "Did the agent put you on hold?",
+   "answer": "No",
+   "why": "لم تضعني الموظفة على الانتظار في أي لحظة من المكالمة.",
+   "note": "",
+   "q_ar": "هل وضعك الموظف على الانتظار؟"
+  },
+  "CQ1.yn": {
+   "question": "Technical difficulties during the call?",
+   "answer": "No",
+   "why": "لم تواجهني أي مشكلة تقنية أثناء المكالمة.",
+   "note": "",
+   "q_ar": "هل واجهت صعوبات تقنية؟"
+  },
+  "CL1": {
+   "question": "CSR asked if you need further assistance?",
+   "answer": "Yes",
+   "why": "سألتني في نهاية المكالمة إن كنت أحتاج إلى أي خدمة أخرى.",
+   "note": "",
+   "q_ar": "هل سأل إن كنت بحاجة لمساعدة أخرى؟"
+  },
+  "CL2": {
+   "question": "Agent mentioned your name during closing?",
+   "answer": "No",
+   "why": "لم تذكر اسمي عند إنهاء المكالمة.",
+   "note": "",
+   "q_ar": "هل ذكر اسمك عند الإغلاق؟"
+  },
+  "CL3": {
+   "question": "Farewell: \"Thank you for contacting Riyad Bank\"?",
+   "answer": "Yes",
+   "why": "ودّعتني بعبارة شكر على الاتصال ببنك الرياض.",
+   "note": "",
+   "q_ar": "هل ودّعك بشكر الاتصال ببنك الرياض؟"
+  },
+  "CL4": {
+   "question": "Mentioned transfer to the evaluation survey?",
+   "answer": "Yes",
+   "why": "أشارت في ختام المكالمة إلى أن التقييم سيأتي بعدها.",
+   "note": "",
+   "q_ar": "هل ذكر التحويل لتقييم المكالمة؟"
+  },
+  "OV1": {
+   "question": "Overall experience (1-5)",
+   "answer": "4 - Good",
+   "why": "مكالمة سريعة ومهذبة، وأجابت الموظفة عن استفساري بوضوح وذكرت قناتين للخدمة، غير أنها لم تذكر اسمها ولم تسألني عن اسمي.",
+   "note": "",
+   "q_ar": "التقييم العام"
+  }
+ }
+}
