@@ -1,0 +1,317 @@
+{
+ "jobId": "149243",
+ "answers": {
+  "Z1": {
+   "question": "Z1. Shopper Name",
+   "answer": "Layla Alamoudi",
+   "why": "اسم المتسوقة كما ظهر في النموذج",
+   "note": "",
+   "second": null,
+   "q_ar": ""
+  },
+  "Z2": {
+   "question": "Z2. Shopper Gender",
+   "answer": "Female",
+   "why": "أنا متسوقة أنثى",
+   "note": "",
+   "second": null,
+   "q_ar": ""
+  },
+  "Z3": {
+   "question": "Z3. Nationality",
+   "answer": "Saudi",
+   "why": "الجنسية سعودية",
+   "note": "",
+   "second": null,
+   "q_ar": ""
+  },
+  "Z4": {
+   "question": "Z4. Scenario",
+   "answer": "Home Loan",
+   "why": "استفسرتُ عن التمويل العقاري",
+   "note": "",
+   "second": null,
+   "q_ar": ""
+  },
+  "Z4.1": {
+   "question": "Z4.1. What platform did you use?",
+   "answer": "Website",
+   "why": "قدّمتُ الطلب عبر الموقع الإلكتروني للبنك",
+   "note": "",
+   "second": null,
+   "q_ar": ""
+  },
+  "Z5": {
+   "question": "Z5. Time of call (start)",
+   "answer": "09:15:00",
+   "why": "وقت بدء المكالمة كما ظهر في سجل المكالمات",
+   "note": "",
+   "second": null,
+   "q_ar": ""
+  },
+  "Z6": {
+   "question": "Z6. Time ending the call",
+   "answer": "09:21:00",
+   "why": "مدة المكالمة نحو 6 دقائق",
+   "note": "",
+   "second": null,
+   "q_ar": ""
+  },
+  "Z7": {
+   "question": "Z7. Call back Date",
+   "answer": "11/14/2026",
+   "why": "لم يتصل البنك؛ هذا تاريخ المكالمة التي أجريتُها",
+   "note": "",
+   "second": null,
+   "q_ar": ""
+  },
+  "Z8": {
+   "question": "Z8. Call back Day",
+   "answer": "Saturday",
+   "why": "يوم المكالمة",
+   "note": "",
+   "second": null,
+   "q_ar": ""
+  },
+  "A1": {
+   "question": "A1. Were you able to submit the request successfully?",
+   "answer": "Yes",
+   "why": "لم يُقبل الطلب من المحاولة الأولى؛ إذ ظهرت لي رسالة: The requested URL was rejected. Please consult with your administrator، مع رقم دعم، وأعدتُ التعبئة أكثر من مرة حتى قُبل الإرسال في النهاية",
+   "note": "",
+   "second": null,
+   "q_ar": ""
+  },
+  "A2": {
+   "question": "A2. Were you notified that the request has been submitted successfully?",
+   "answer": "No",
+   "why": "لم تصلني رسالة نصية بتأكيد الطلب ولا رقم مرجعي",
+   "note": "",
+   "second": null,
+   "q_ar": ""
+  },
+  "A3": {
+   "question": "A3. If no, please specify the reason",
+   "answer": "—",
+   "why": "لم تصلني رسالة تأكيد بعد الإرسال. ظهرت لي أثناء المحاولات رسالة: The requested URL was rejected. Please consult with your administrator. وأرقام الدعم 6720454630612631142 و10287921481011723661 و6720454630612088970",
+   "note": "",
+   "second": null,
+   "q_ar": ""
+  },
+  "B1": {
+   "question": "B1. Did you receive a call back within 1 working day?",
+   "answer": "No",
+   "why": "لم يتصل بي أحد من البنك بعد تقديم الطلب، فاتصلتُ بنفسي بعد نحو أربعة أو خمسة أيام لأستفسر عنه",
+   "note": "",
+   "second": null,
+   "q_ar": ""
+  },
+  "B2": {
+   "question": "B2. Did you receive a call back more than 1 working day after submitting?",
+   "answer": "No",
+   "why": "لم يتصل بي البنك في أي وقت لاحق؛ المكالمة التي أجريتُها كانت من جانبي",
+   "note": "",
+   "second": null,
+   "q_ar": ""
+  },
+  "C1": {
+   "question": "C1. Did the agent welcome and greet you using your name?",
+   "answer": "No",
+   "why": "ردّ الموظف بقوله: حياك، تفضل، ثم تفضلي بعد السلام، ولم يرحّب بي باسمي",
+   "note": "",
+   "second": null,
+   "q_ar": ""
+  },
+  "C2": {
+   "question": "C2. Did the agent mention Riyad Bank's name in the greeting?",
+   "answer": "No",
+   "why": "لم يعرّف بنفسه ولا بقسم التسويق، ولم يسألني إن كان الوقت مناسبًا؛ بل بدأ بتحية مقتضبة",
+   "note": "",
+   "second": null,
+   "q_ar": ""
+  },
+  "C3": {
+   "question": "C3. Did the agent state their own name?",
+   "answer": "No",
+   "why": "لم يذكر الموظف اسمه في أي موضع من المكالمة",
+   "note": "",
+   "second": null,
+   "q_ar": ""
+  },
+  "D1": {
+   "question": "D1. Was the agent tone clear and understandable?",
+   "answer": "Yes",
+   "why": "كان صوته واضحًا ومفهومًا ولم أحتج إلى إعادة أي جملة",
+   "note": "",
+   "second": null,
+   "q_ar": ""
+  },
+  "D2": {
+   "question": "D2. Did the agent give you full attention?",
+   "answer": "Yes",
+   "why": "تابع كلامي حتى النهاية، وصمت نحو 49 ثانية وهو يراجع النظام بعد أن قال: لحظة",
+   "note": "",
+   "second": null,
+   "q_ar": ""
+  },
+  "D3": {
+   "question": "D3. Did the agent have a helpful attitude?",
+   "answer": "Yes",
+   "why": "كان متعاونًا، فأجاب عن أسئلتي وأوضح لي سبب عدم أهليتي وبدائل الراتب",
+   "note": "",
+   "second": null,
+   "q_ar": ""
+  },
+  "D4": {
+   "question": "D4. Was the agent polite?",
+   "answer": "Yes",
+   "why": "كان مهذبًا في كلامه، وردّ على شكري بقوله: يعافيك، هلا وسهلاً",
+   "note": "",
+   "second": null,
+   "q_ar": ""
+  },
+  "D5": {
+   "question": "D5. Was there too much noise from other agents?",
+   "answer": "No",
+   "why": "لم أسمع أي ضجيج من موظفين آخرين في الخلفية",
+   "note": "",
+   "second": null,
+   "q_ar": ""
+  },
+  "G1": {
+   "question": "G1. Did the agent address the exact inquiry you submitted?",
+   "answer": "Yes",
+   "why": "سألني عن الهوية والاسم ثم عن التمويل العقاري، وتناول طلبي ورفع لي طلبًا مبدئيًا جديدًا لأنه لم يجد طلبي السابق",
+   "note": "",
+   "second": null,
+   "q_ar": ""
+  },
+  "G2": {
+   "question": "G2. Did the agent mention the eligibility criteria?",
+   "answer": "Yes",
+   "why": "سألتُه عن معايير الأهلية فذكر أن تكون جهة العمل معتمدة، وإلا فالحد الأدنى للراتب 15 ألفًا بعد التأمينات، وللجهات المعتمدة بين 5000 و8000 حسب التصنيف",
+   "note": "",
+   "second": null,
+   "q_ar": ""
+  },
+  "G3": {
+   "question": "G3. Did the agent mention the required documents?",
+   "answer": "No",
+   "why": "حين سألتُه عن المستندات قال إن الفرع هو من يزوّدني بها، ولم يذكر أي مستند",
+   "note": "",
+   "second": null,
+   "q_ar": ""
+  },
+  "G4": {
+   "question": "G4. Did the agent explain the benefits and features?",
+   "answer": "No",
+   "why": "لم يشرح الميزات والفوائد بنفسه؛ لم يتطرق إلى الالتزام بالشريعة ولا إلى مقيّم عقاري في اليوم نفسه، واكتفى بالإشارة إلى سرعة الإجراءات حين سألتُه عن موعد الاستلام",
+   "note": "",
+   "second": null,
+   "q_ar": ""
+  },
+  "G5": {
+   "question": "G5. Did the agent mention the estimated loan amount?",
+   "answer": "No",
+   "why": "لم يذكر المبلغ التقديري للتمويل لأن جهة عملي غير معتمدة",
+   "note": "",
+   "second": null,
+   "q_ar": ""
+  },
+  "G6": {
+   "question": "G6. Did the agent mention the financing period (tenor)?",
+   "answer": "Yes",
+   "why": "ذكر مدتين للتمويل: 15 سنة و20 سنة",
+   "note": "",
+   "second": null,
+   "q_ar": ""
+  },
+  "G7": {
+   "question": "G7. Did the agent mention the estimated monthly payment?",
+   "answer": "Yes",
+   "why": "حين ألححتُ قال إن القسط تقريبًا ألفان، بعد أن ذكر أنه يحتاج إلى النظام لتأكيده",
+   "note": "",
+   "second": null,
+   "q_ar": ""
+  },
+  "G8": {
+   "question": "G8. Did the agent provide the interest rate?",
+   "answer": "Yes",
+   "why": "ذكر أن النسبة 5.80 لمدة 20 سنة و5.50 لمدة 15 سنة لغير المدعومين",
+   "note": "",
+   "second": null,
+   "q_ar": ""
+  },
+  "G9": {
+   "question": "G9. Did the agent mention the estimated down payment?",
+   "answer": "No",
+   "why": "لم يذكر الدفعة المقدمة المطلوبة",
+   "note": "",
+   "second": null,
+   "q_ar": ""
+  },
+  "G10": {
+   "question": "G10. Did the agent inform you about administrative fees?",
+   "answer": "Yes",
+   "why": "ذكر أن الرسوم الإدارية تظهر في النظام بعد الموافقة، وقدّرها بين 1000 و1300 ريال تقريبًا",
+   "note": "",
+   "second": null,
+   "q_ar": ""
+  },
+  "I1": {
+   "question": "I1. Did the agent ask open-ended questions?",
+   "answer": "No",
+   "why": "اقتصرت أسئلته على الهوية والاسم وجهة العمل والراتب والدعم السكني، ولم يسألني أسئلة مفتوحة عن احتياجاتي",
+   "note": "",
+   "second": null,
+   "q_ar": ""
+  },
+  "I2": {
+   "question": "I2. Did the agent highlight offers or advantages?",
+   "answer": "Yes",
+   "why": "أشار إلى أن بنك الرياض يتميز بسرعة الإجراءات، وأن المدة تقارب أسبوعًا ونصفًا بعد تقييم العقار",
+   "note": "",
+   "second": null,
+   "q_ar": ""
+  },
+  "I3": {
+   "question": "I3. Did the agent demonstrate proactivity?",
+   "answer": "No",
+   "why": "لم يبادر بتقديم المعلومات؛ كل ما ذكره كان إجابة عن أسئلتي",
+   "note": "",
+   "second": null,
+   "q_ar": ""
+  },
+  "I4": {
+   "question": "I4. Did the agent cross-sell other products?",
+   "answer": "No",
+   "why": "لم يعرض عليّ أي منتج أو خدمة أخرى",
+   "note": "",
+   "second": null,
+   "q_ar": ""
+  },
+  "J1": {
+   "question": "J1. Did you encounter technical difficulties?",
+   "answer": "No",
+   "why": "لم أواجه أي مشكلة تقنية أثناء المكالمة",
+   "note": "",
+   "second": null,
+   "q_ar": ""
+  },
+  "K1": {
+   "question": "K1. Did the agent mention your name during the closing?",
+   "answer": "No",
+   "why": "لم يذكر اسمي عند إنهاء المكالمة",
+   "note": "",
+   "second": null,
+   "q_ar": ""
+  },
+  "K2": {
+   "question": "K2. Did the agent say 'Thank you for contacting Riyad Bank'?",
+   "answer": "No",
+   "why": "اكتفى بقوله: يعافيك، هلا وسهلاً، ولم يقل شكرًا لاتصالك ببنك الرياض",
+   "note": "",
+   "second": null,
+   "q_ar": ""
+  }
+ }
+}

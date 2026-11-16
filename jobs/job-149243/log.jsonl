@@ -1,0 +1,7 @@
+{"ts":"2026-11-16T00:52:08.615Z","agent":"intake","level":"info","msg":"استلمت المشروع: Layla"}
+{"ts":"2026-11-16T00:52:08.652Z","agent":"intake","level":"info","msg":"ملف جديد اترفع: WhatsApp Audio 2026-11-16 at 2.47.54 AM.ogg"}
+{"ts":"2026-11-16T00:52:08.672Z","agent":"intake","level":"info","msg":"ملف جديد اترفع: 149243 - Layla.zip"}
+{"ts": "2026-11-16T00:58:00.000Z", "agent": "listener", "level": "info", "msg": "فتحت الـ zip: 12 صورة + تسجيل مكالمة، ومعاهم فويس نوت شرح من أشرف — جاري القراءة"}
+{"ts": "2026-11-16T01:10:00.000Z", "agent": "listener", "level": "info", "msg": "تفريغ المكالمة (4:40) والفويس نوت خلصوا. الاستمارة مش متاحة: Ipsos Access Denied على InstanceID=149243"}
+{"ts": "2026-11-16T01:20:00.000Z", "agent": "former", "level": "info", "msg": "Ipsos فتح الجوب 149243 (Website Lead — Home Loan). جاري الملء (Save فقط)"}
+{"ts": "2026-11-16T01:35:00.000Z", "agent": "former", "level": "info", "msg": "اتحفظت على Ipsos (Save فقط) ✅ — Website Lead / Home Loan. محتاج تأكيد: A2 (SMS) وتاريخ/وقت المكالمة"}
