@@ -1,5 +1,5 @@
 Job 149168 — Riyad Bank Call Center (Service Inquiry: annual account statement), Diamond segment
-Call: Tuesday 17/11/2026, 1:50 PM, 3:37 (video + audio)
+Call: Monday 16/11/2026, 1:50 PM, 3:37 (video + audio)
 
 [00:00] IVR: [unclear] عزيز المصرفية الماسية. يرجى الانتظار. ... رسائل ترويجية وتنبيه عن حساب غير مطالب به.
 [00:32-01:01] IVR Main Menu: 1 مدفوعات، 2 تحويلات وأقساط، 3 حسابات، 4 قروض، 5 إعدادات، 6 اكتتاب، 0 خدمة العملاء.

@@ -66,15 +66,15 @@
   },
   "Z8": {
    "question": "Z8. Call Date",
-   "answer": "17/11/2026",
-   "why": "تاريخ المكالمة (اليوم)",
+   "answer": "16/11/2026",
+   "why": "تاريخ المكالمة (إمبارح)",
    "note": "",
    "q_ar": "تاريخ الاتصال"
   },
   "Z9": {
    "question": "Z9. Call Day",
-   "answer": "Tuesday",
-   "why": "الثلاثاء",
+   "answer": "Monday",
+   "why": "الاثنين",
    "note": "",
    "q_ar": "يوم الاتصال"
   },
