@@ -1,0 +1,355 @@
+{
+ "jobId": "T1117-0512",
+ "answers": {
+  "Z1": {
+   "question": "Z1. Shopper Name",
+   "answer": "Abdulaziz",
+   "why": "اسم المتسوق: عبد العزيز",
+   "note": "",
+   "q_ar": "اسم المتسوق"
+  },
+  "Z2": {
+   "question": "Z2. Shopper Gender",
+   "answer": "Male",
+   "why": "متسوق ذكر",
+   "note": "",
+   "q_ar": "جنس المتسوق"
+  },
+  "Z3": {
+   "question": "Z3. Nationality",
+   "answer": "Saudi",
+   "why": "سعودي الجنسية",
+   "note": "",
+   "q_ar": "الجنسية"
+  },
+  "Z4": {
+   "question": "Z4. Segment",
+   "answer": "—",
+   "why": "الشريحة: تُحدَّد عند الاختيار في Ipsos",
+   "note": "",
+   "q_ar": "الشريحة"
+  },
+  "Z4.1": {
+   "question": "Z4.1. Language used for the call",
+   "answer": "Arabic",
+   "why": "بالعربية",
+   "note": "",
+   "q_ar": "لغة المكالمة"
+  },
+  "Z5": {
+   "question": "Z5. Scenario",
+   "answer": "Service Inquiry",
+   "why": "استفسار عن البطاقة الذهبية (المصرفية الذهبية) ورسومها السنوية",
+   "note": "",
+   "q_ar": "السيناريو"
+  },
+  "Z5.sub": {
+   "question": "Sub-scenario",
+   "answer": "—",
+   "why": "السيناريو الفرعي يُحدَّد في Ipsos",
+   "note": "",
+   "q_ar": "السيناريو الفرعي"
+  },
+  "Z6": {
+   "question": "Z6. Time of call",
+   "answer": "15:28:00",
+   "why": "بدأت المكالمة نحو 3:28 م",
+   "note": "",
+   "q_ar": "وقت بدء المكالمة"
+  },
+  "Z7": {
+   "question": "Z7. Time ending the call",
+   "answer": "15:37:00",
+   "why": "انتهت المكالمة نحو 3:37 م",
+   "note": "",
+   "q_ar": "وقت إنهاء المكالمة"
+  },
+  "Z8": {
+   "question": "Z8. Call Date",
+   "answer": "16/11/2026",
+   "why": "تاريخ المكالمة",
+   "note": "",
+   "q_ar": "تاريخ الاتصال"
+  },
+  "Z9": {
+   "question": "Z9. Call Day",
+   "answer": "Monday",
+   "why": "الاثنين",
+   "note": "",
+   "q_ar": "يوم الاتصال"
+  },
+  "IVR1": {
+   "question": "Did you connect to Riyad Bank successfully from the first time?",
+   "answer": "Yes",
+   "why": "وصلتُ إلى القائمة الصوتية من المحاولة الأولى.",
+   "note": "",
+   "q_ar": "هل اتصلت ببنك الرياض بنجاح من المحاولة الأولى؟"
+  },
+  "IVR1.attempts": {
+   "question": "Number of attempts until connected",
+   "answer": "1",
+   "why": "اتصلتُ مرة واحدة فقط.",
+   "note": "",
+   "q_ar": "عدد المحاولات"
+  },
+  "IVR2": {
+   "question": "Any issues with the IVR?",
+   "answer": "No",
+   "why": "لم أواجه أي مشكلة في الرد الآلي.",
+   "note": "",
+   "q_ar": "هل واجهت مشكلات في الرد الآلي؟"
+  },
+  "IVR3": {
+   "question": "Was the IVR easy to understand & follow?",
+   "answer": "Yes",
+   "why": "كانت القوائم واضحة وسهلة المتابعة رغم طول الرسائل التمهيدية.",
+   "note": "",
+   "q_ar": "هل كان الرد الآلي سهل الفهم والمتابعة؟"
+  },
+  "IVR4": {
+   "question": "Was the CSR option clearly defined and easy to find?",
+   "answer": "Yes",
+   "why": "كان خيار التحدث مع الموظف واضحًا وسهل الوصول.",
+   "note": "",
+   "q_ar": "هل كان خيار الموظف واضحًا وسهل الوصول؟"
+  },
+  "PB1": {
+   "question": "Able to sign in to Phone Banking?",
+   "answer": "Yes",
+   "why": "أدخلتُ رقم المستخدم والرمز السري فقبلهما النظام وانتقلتُ إلى القائمة الرئيسية.",
+   "note": "",
+   "q_ar": "هل تمكنت من تسجيل الدخول إلى الهاتف المصرفي؟"
+  },
+  "RA1": {
+   "question": "Connected to a CSR on the first attempt?",
+   "answer": "Yes",
+   "why": "تم تحويلي إلى الموظفة من المحاولة الأولى.",
+   "note": "",
+   "q_ar": "هل تم توصيلك بموظف من المحاولة الأولى؟"
+  },
+  "RA1.attempts": {
+   "question": "Number of attempts until connected to the CSR",
+   "answer": "1",
+   "why": "محاولة واحدة.",
+   "note": "",
+   "q_ar": "عدد المحاولات حتى الوصول للموظف"
+  },
+  "RA2": {
+   "question": "Waiting time per attempt",
+   "answer": "00:00:23",
+   "why": "انتظرتُ نحو 23 ثانية بين آخر اختيار وردّ الموظفة.",
+   "note": "",
+   "q_ar": "وقت الانتظار لكل محاولة"
+  },
+  "RA3": {
+   "question": "Reached the CSR within 4 seconds?",
+   "answer": "No",
+   "why": "تجاوز الانتظار أربع ثوانٍ.",
+   "note": "",
+   "q_ar": "هل وصلت للموظف خلال 4 ثوانٍ؟"
+  },
+  "RA4": {
+   "question": "Did the CSR apologize for the waiting time?",
+   "answer": "No",
+   "why": "لم تعتذر الموظفة عن وقت الانتظار قبل الرد.",
+   "note": "",
+   "q_ar": "هل اعتذر الموظف عن وقت الانتظار؟"
+  },
+  "CO1": {
+   "question": "CSR mentioned Riyad Bank's name in the greeting?",
+   "answer": "Yes",
+   "why": "ذكرت الموظفة اسم بنك الرياض في التحية.",
+   "note": "",
+   "q_ar": "هل ذكر الموظف اسم بنك الرياض؟"
+  },
+  "CO2": {
+   "question": "CSR stated their own name?",
+   "answer": "No",
+   "why": "لم أتمكن من تمييز اسم الموظفة لأنه كان غير واضح.",
+   "note": "",
+   "q_ar": "هل ذكر الموظف اسمه؟"
+  },
+  "CO3": {
+   "question": "CSR asked \"How can I help you\"?",
+   "answer": "Yes",
+   "why": "سألتني كيف يمكنها مساعدتي.",
+   "note": "",
+   "q_ar": "هل سأل \"كيف يمكنني مساعدتك؟\""
+  },
+  "CO4": {
+   "question": "Agent asked for your name?",
+   "answer": "Yes",
+   "why": "طلبت التعرّف باسمي فأخبرتها به.",
+   "note": "",
+   "q_ar": "هل طلب الموظف التعرف باسمك؟"
+  },
+  "CA1": {
+   "question": "CSR communicated in your preferred language?",
+   "answer": "Yes",
+   "why": "تحدثت معي باللغة العربية.",
+   "note": "",
+   "q_ar": "هل تواصل بلغتك المفضلة؟"
+  },
+  "CA2": {
+   "question": "CSR tone clear and understandable?",
+   "answer": "Yes",
+   "why": "كانت نبرتها واضحة ومفهومة رغم سرعتها في بداية المكالمة.",
+   "note": "",
+   "q_ar": "هل كانت نبرة الموظف واضحة؟"
+  },
+  "CA3": {
+   "question": "CSR gave full attention?",
+   "answer": "Yes",
+   "why": "تابعت استفساري واهتمت بتوضيح ما أريد.",
+   "note": "",
+   "q_ar": "هل منحك الموظف اهتمامه الكامل؟"
+  },
+  "CA4": {
+   "question": "CSR had a helpful attitude?",
+   "answer": "Yes",
+   "why": "أبدت تعاونًا في البحث عن رسوم البطاقة وشروطها.",
+   "note": "",
+   "q_ar": "هل كان الموظف متعاونًا؟"
+  },
+  "CA5": {
+   "question": "CSR was polite?",
+   "answer": "Yes",
+   "why": "كانت مهذبة في أسلوبها طوال المكالمة.",
+   "note": "",
+   "q_ar": "هل كان الموظف مهذبًا؟"
+  },
+  "CA6": {
+   "question": "Too much background noise?",
+   "answer": "No",
+   "why": "لم ألحظ ضوضاء مزعجة في الخلفية.",
+   "note": "",
+   "q_ar": "هل كان هناك ضجيج في الخلفية؟"
+  },
+  "CA7": {
+   "question": "Agent used your name during the interaction?",
+   "answer": "Yes",
+   "why": "خاطبتني باسمي بعد أن عرفته.",
+   "note": "",
+   "q_ar": "هل خاطبك باسمك؟"
+  },
+  "CA8": {
+   "question": "Agent silent for more than 10 seconds?",
+   "answer": "Yes",
+   "why": "ساد صمت طويل أثناء الانتظار مرتين دون أي موسيقى.",
+   "note": "",
+   "q_ar": "هل صمت الموظف أكثر من 10 ثوانٍ؟"
+  },
+  "SI1": {
+   "question": "CSR asked questions to understand your inquiry?",
+   "answer": "Yes",
+   "why": "سألتني عن البطاقة المقصودة وتأكدت من استفساري أكثر من مرة.",
+   "note": "",
+   "q_ar": "هل سأل أسئلة لفهم استفسارك؟"
+  },
+  "SI2": {
+   "question": "Step-by-step guidance to complete your request?",
+   "answer": "No",
+   "why": "اكتفت بذكر شروط الاستحقاق دون إرشادي إلى خطوات تنفيذية.",
+   "note": "",
+   "q_ar": "هل قدّم إرشادات خطوة بخطوة؟"
+  },
+  "SI3": {
+   "question": "Were the instructions clear?",
+   "answer": "Yes",
+   "why": "كان شرح الشروط واضحًا وقابلًا للفهم.",
+   "note": "",
+   "q_ar": "هل كانت التعليمات واضحة؟"
+  },
+  "SI4": {
+   "question": "More than one channel provided?",
+   "answer": "No",
+   "why": "لم تعرض عليّ أكثر من قناة للمتابعة.",
+   "note": "",
+   "q_ar": "هل وفّر أكثر من قناة؟"
+  },
+  "OH1": {
+   "question": "Did the agent put you on hold?",
+   "answer": "Yes",
+   "why": "وضعتني على الانتظار مرتين لتتأكد من نوع البطاقة ورسومها السنوية.",
+   "note": "",
+   "q_ar": "هل وضعك الموظف على الانتظار؟"
+  },
+  "OH2": {
+   "question": "Did the agent ask your permission to put you on hold?",
+   "answer": "No",
+   "why": "لم تطلب إذني، بل اكتفت بقول: خلك معي الحين، ثم لحظة.",
+   "note": "",
+   "q_ar": "هل استأذنك الموظف قبل وضعك على الانتظار؟"
+  },
+  "OH3": {
+   "question": "Did the hold duration exceed 60 seconds?",
+   "answer": "Yes",
+   "why": "استغرق الانتظار الأول نحو دقيقتين (124 ثانية) والثاني نحو دقيقتين ونصف (143 ثانية).",
+   "note": "",
+   "q_ar": "هل تجاوزت مدة الانتظار 60 ثانية؟"
+  },
+  "OH4": {
+   "question": "If yes, did the agent come back and tell you to wait a little bit more?",
+   "answer": "Yes",
+   "why": "عادت الموظفة بعد الانتظار الأول لتتأكد من نوع البطاقة ثم طلبت مني الانتظار مجددًا.",
+   "note": "",
+   "q_ar": "هل رجع الموظف وطلب منك الانتظار أكثر؟"
+  },
+  "OH5": {
+   "question": "Exact time you were placed on hold",
+   "answer": "15:31:00",
+   "why": "بدأ الانتظار الأول نحو الساعة 3:31 م.",
+   "note": "",
+   "q_ar": "الوقت الذي وُضعت فيه على الانتظار"
+  },
+  "OH6": {
+   "question": "Did the agent apologize/thank you for waiting and mention your name?",
+   "answer": "Yes",
+   "why": "في المرة الثانية شكرتني باسمي على الانتظار واعتذرت عن الإطالة.",
+   "note": "",
+   "q_ar": "هل اعتذر وشكرك على الانتظار وذكر اسمك؟"
+  },
+  "CQ1.yn": {
+   "question": "Technical difficulties during the call?",
+   "answer": "No",
+   "why": "لم تواجهني صعوبات تقنية، سوى أن صوتها كان سريعًا في بداية المكالمة.",
+   "note": "",
+   "q_ar": "هل واجهت صعوبات تقنية؟"
+  },
+  "CL1": {
+   "question": "CSR asked if you need further assistance?",
+   "answer": "Yes",
+   "why": "سألتني إن كنت أحتاج أي خدمة أخرى.",
+   "note": "",
+   "q_ar": "هل سأل إن كنت بحاجة لمساعدة أخرى؟"
+  },
+  "CL2": {
+   "question": "Agent mentioned your name during closing?",
+   "answer": "Yes",
+   "why": "ذكرت اسمي عند ختام المكالمة.",
+   "note": "",
+   "q_ar": "هل ذكر اسمك عند الإغلاق؟"
+  },
+  "CL3": {
+   "question": "Farewell: \"Thank you for contacting Riyad Bank\"?",
+   "answer": "Yes",
+   "why": "ودّعتني بشكري على تواصلي مع بنك الرياض.",
+   "note": "",
+   "q_ar": "هل ودّعك بشكر الاتصال ببنك الرياض؟"
+  },
+  "CL4": {
+   "question": "Mentioned transfer to the evaluation survey?",
+   "answer": "No",
+   "why": "لم تذكر أنه سيتم تحويل المكالمة إلى استبيان التقييم.",
+   "note": "",
+   "q_ar": "هل ذكر التحويل لتقييم المكالمة؟"
+  },
+  "OV1": {
+   "question": "Overall experience (1-5)",
+   "answer": "3 - Fair",
+   "why": "كانت الموظفة مهذبة ومتعاونة وأجابت عن استفساري، لكن الانتظار الطويل مرتين دون موسيقى أو استئذان أثّر على تجربتي.",
+   "note": "",
+   "q_ar": "التقييم العام"
+  }
+ }
+}
