@@ -350,7 +350,12 @@
   function autoFillFromFiles(files) {
     if (!$('upTarget') || $('upTarget').value !== 'new') return;
     const seen = []; files.forEach((f) => { const r = parseFile(f); if (r && !seen.find((x) => x.num === r.num)) seen.push(r); });
-    if (!seen.length) return;
+    if (!seen.length) {
+      let h0 = $('autoFillHint');
+      if (!h0) { h0 = document.createElement('div'); h0.id = 'autoFillHint'; h0.className = 'muted small'; $('picked').parentElement.insertBefore(h0, $('picked')); }
+      h0.textContent = 'مفيش رقم جوب في اسم الملف، هيتسجّل برقم مؤقت وClaude هيقرا الرقم الحقيقي من الفيديو/الصور ويظبطه.';
+      return;
+    }
     $('upJobNo').value = seen.map((r) => r.num).join(', ');
     $('upName').value = seen.length === 1 ? seen[0].name : seen.map((r) => r.name).filter(Boolean).join(' / ');
     let hint = $('autoFillHint');
@@ -412,6 +417,7 @@
     const working = j && j.status === 'working';
     $('dlText').innerHTML = (working ? '⚡ Claude شغال دلوقتي' : '✔ وصل لـ Claude — في الطابور') + `<small>الوقت المتبقي التقريبي ${mm} (حوالي 5 دقايق)</small>`;
   }
+  function tempJobNo() { const d = new Date(), p = (n) => String(n).padStart(2, '0'); return 'T' + p(d.getMonth() + 1) + p(d.getDate()) + '-' + p(d.getHours()) + p(d.getMinutes()); }
   async function submitUpload(e) {
     e.preventDefault();
     if (demo) { alert('وقّف وضع التجربة الأول.'); return; }
@@ -424,7 +430,7 @@
       if (id === 'new') {
         const typed = String($('upJobNo').value || '').split(/[,\s]+/).filter(Boolean)[0] || '';
         const gm = new Map();
-        picked.forEach((f) => { const r = parseFile(f); const num = (r && r.num) || typed.replace(/[^A-Za-z0-9_-]/g, ''); const nm = (r && r.name) || ''; if (!gm.has(num)) gm.set(num, { num, name: nm, files: [] }); gm.get(num).files.push(f); });
+        picked.forEach((f) => { const r = parseFile(f); const num = (r && r.num) || typed.replace(/[^A-Za-z0-9_-]/g, '') || tempJobNo(); const nm = (r && r.name) || ''; if (!gm.has(num)) gm.set(num, { num, name: nm, files: [] }); gm.get(num).files.push(f); });
         gm.forEach((g) => groups.push(g));
       } else groups.push({ id, files: picked.slice() });
       let doneN = 0; const totalN = picked.length;
